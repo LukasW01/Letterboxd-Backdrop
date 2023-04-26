@@ -1,7 +1,7 @@
 # Letterboxd-Backdrop
 Browser extension that adds a custom backdrop image to your Letterboxd profile without paying for Patron.
 
-![letterboxd-profile](src/files/letterboxd-profile.png)
+![letterboxd-profile](readme/files/letterboxd-profile.png)
 
 ###  Getting Started
 
