@@ -1,0 +1,10 @@
+{
+  "name": "letterboxd-backdrop",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "web-ext build --source-dir=src"
+  },
+  "dependencies": {
+    "web-ext": "^7.6.2"
+  }
+}
