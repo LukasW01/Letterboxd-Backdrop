@@ -1,0 +1,21 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IDE
+.idea/
+.vscode/
+.atom/
+
+# Build
+/dist/
+
+# npm
+node_modules/*
