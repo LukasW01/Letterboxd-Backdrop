@@ -16,6 +16,7 @@ migrate_working_dir/
 
 # Build
 /dist/
+/web-ext-artifacts/
 
 # npm
 node_modules/*
