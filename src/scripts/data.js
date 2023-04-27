@@ -12,6 +12,6 @@ if (yearElem && nameElem && licenseElem && titleElem && infoElem) {
     infoElem.innerHTML = 'Browser extension that adds a custom backdrop image to your Letterboxd profile without paying for Patron.';
     nameElem.innerHTML = 'Lukas Wigger';
     licenseElem.innerHTML = '<a href="https://en.wikipedia.org/wiki/MIT_License" target="_blank">MIT</a>';
-    } else {
+} else {
     console.error("Could not find year element.");
 }

@@ -8,7 +8,6 @@
 </head>
 
 <body>
-<!-- i apologise to the letterboxd team, i'm fairly broke at the moment (-̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥᷄_-̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥̥᷅ ) -->
 <main>
     <div class="header">
         <img src="images/letterboxd.svg" alt="letterboxd">
@@ -18,15 +17,15 @@
     <div id="wrapper" class="b">
         <label for="image" class="label-image">URL:</label>
         <input id="image" type="text" placeholder="https://ltrbxd.com/image.jpg" />
-        <p id="error"></p>
+        <span id="error"></span>
     </div>
     <div class="b footer-div">
         <p class="footer">© <span id="year"></span> - <span id="name"></span>. All rights reserved. Licensed under <span id="license"></span> </p>
     </div>
 </main>
 <footer>
-    <script src="scripts/input.js"></script>
     <script src="scripts/data.js"></script>
+    <script type="module" src="scripts/input.js"></script>
 </footer>
 </body>
 </html>
