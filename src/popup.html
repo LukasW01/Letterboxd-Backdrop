@@ -9,23 +9,28 @@
 
 <body>
 <main>
-    <div class="header">
+    <div class="header-div">
         <img src="images/letterboxd.svg" alt="letterboxd">
         <h1 id="title"></h1>
         <span id="info"></span>
     </div>
     <div id="wrapper" class="b">
-        <label for="image" class="label-image">URL:</label>
-        <input id="image" type="text" placeholder="https://ltrbxd.com/image.jpg" />
-        <span id="error"></span>
+        <div>
+            <label for="image" class="label-image">URL:</label>
+            <input id="image" type="text" placeholder="https://ltrbxd.com/image.jpg"/>
+            <p id="error"></p>
+        </div>
+        <div class="button">
+            <button id="button">Delete Image</button>
+        </div>
     </div>
     <div class="b footer-div">
         <p class="footer">© <span id="year"></span> - <span id="name"></span>. All rights reserved. Licensed under <span id="license"></span> </p>
     </div>
 </main>
 <footer>
-    <script src="scripts/data.js"></script>
-    <script type="module" src="scripts/input.js"></script>
+    <script src="scripts/data.ts"></script>
+    <script type="module" src="scripts/input.ts"></script>
 </footer>
 </body>
 </html>

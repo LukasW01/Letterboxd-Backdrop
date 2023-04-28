@@ -3,6 +3,8 @@ lockfileVersion: 5.4
 specifiers:
   '@types/webextension-polyfill': ^0.10.0
   copy-webpack-plugin: ^11.0.0
+  ts-loader: ^9.4.2
+  typescript: ^5.0.4
   web-ext: ^7.6.2
   webextension-polyfill: ^0.10.0
   webpack: ^5.81.0
@@ -11,6 +13,8 @@ specifiers:
 dependencies:
   '@types/webextension-polyfill': 0.10.0
   copy-webpack-plugin: 11.0.0_webpack@5.81.0
+  ts-loader: 9.4.2_acmn7qa6psldy43yzik3a33ziu
+  typescript: 5.0.4
   web-ext: 7.6.2
   webextension-polyfill: 0.10.0
   webpack: 5.81.0_webpack-cli@5.0.2
@@ -3436,6 +3440,21 @@ packages:
       punycode: 2.3.0
     dev: false
 
+  /ts-loader/9.4.2_acmn7qa6psldy43yzik3a33ziu:
+    resolution: {integrity: sha512-OmlC4WVmFv5I0PpaxYb+qGeGOdm5giHU7HwDDUjw59emP2UYMHy9fFSDcYgSNoH8sXcj4hGCSEhlDZ9ULeDraA==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      typescript: '*'
+      webpack: ^5.0.0
+    dependencies:
+      chalk: 4.1.2
+      enhanced-resolve: 5.13.0
+      micromatch: 4.0.5
+      semver: 7.5.0
+      typescript: 5.0.4
+      webpack: 5.81.0_webpack-cli@5.0.2
+    dev: false
+
   /tunnel-agent/0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
     dependencies:
@@ -3481,6 +3500,12 @@ packages:
 
   /typedarray/0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
+    dev: false
+
+  /typescript/5.0.4:
+    resolution: {integrity: sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==}
+    engines: {node: '>=12.20'}
+    hasBin: true
     dev: false
 
   /unique-string/3.0.0:

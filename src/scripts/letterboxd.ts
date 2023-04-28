@@ -1,26 +1,27 @@
 import polyfill from 'webextension-polyfill';
 
-(async () => {
+async function main(): Promise<void> {
     try {
         const { url } = await polyfill.storage.local.get('url');
-        if (url) {
+        const { checkbox } = await polyfill.storage.local.get('checkbox');
+        if (url && checkbox) {
             console.log(`URL: ${url}`);
+            console.log(`Checkbox: ${checkbox}`);
             backdrop(url);
         }
     } catch (error) {
         console.error(`Error: ${error}`);
     }
-})();
+}
 
-
-function backdrop(url) {
-    const bodyElement = document.querySelector('body').classList.contains("my-own-page");
+function backdrop(url: string): void {
+    const bodyElement = document.querySelector('body').classList.contains('my-own-page');
 
     const activeNavItem = document.querySelector('.navitem.-active');
     const activeNavLinkText = activeNavItem?.querySelector('.navlink')?.textContent;
 
     if (activeNavLinkText === 'Profile' && bodyElement === true) {
-        document.body.classList.add("backdropped", "backdrop-loaded");
+        document.body.classList.add('backdropped', 'backdrop-loaded');
 
         const contentDiv = document.getElementById('content');
         contentDiv.classList.add('-backdrop');
@@ -36,6 +37,7 @@ function backdrop(url) {
         const body = document.getElementsByTagName('body')[0];
         body.insertAdjacentElement('afterbegin', backdropDiv);
     } else {
-        console.log(`Not on own user page or not logged in.`);
+        console.log('Not on own user page or not logged in.');
     }
 }
+
