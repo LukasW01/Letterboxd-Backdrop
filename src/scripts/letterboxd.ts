@@ -1,3 +1,4 @@
+/*
 import polyfill from 'webextension-polyfill';
 
 async function main(): Promise<void> {
@@ -40,4 +41,4 @@ function backdrop(url: string): void {
         console.log('Not on own user page or not logged in.');
     }
 }
-
+*/

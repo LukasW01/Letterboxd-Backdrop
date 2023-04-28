@@ -4,9 +4,7 @@
     "module": "commonjs",
     "target": "es5",
     "sourceMap": true,
-    "esModuleInterop": true
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "esModuleInterop": true,
+    "jsx": "react"
+  }
 }

@@ -16,7 +16,7 @@ pnpm i
 Build the extension:
 
 ```bash
-pnpm build
+pnpm build:all
 ```
 
 ### License

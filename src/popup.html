@@ -1,36 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Settings</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="styles/tail.css">
     <link rel="stylesheet" href="styles/popup.css">
+    <script src="popup.js"></script>
 </head>
-
 <body>
-<main>
-    <div class="header-div">
-        <img src="images/letterboxd.svg" alt="letterboxd">
-        <h1 id="title"></h1>
-        <span id="info"></span>
-    </div>
-    <div id="wrapper" class="b">
-        <div>
-            <label for="image" class="label-image">URL:</label>
-            <input id="image" type="text" placeholder="https://ltrbxd.com/image.jpg"/>
-            <p id="error"></p>
-        </div>
-        <div class="button">
-            <button id="button">Delete Image</button>
-        </div>
-    </div>
-    <div class="b footer-div">
-        <p class="footer">© <span id="year"></span> - <span id="name"></span>. All rights reserved. Licensed under <span id="license"></span> </p>
-    </div>
-</main>
-<footer>
-    <script src="scripts/data.ts"></script>
-    <script type="module" src="scripts/input.ts"></script>
-</footer>
+<div id="root"></div>
 </body>
 </html>
