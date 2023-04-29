@@ -3,7 +3,7 @@
   "description": "Browser extension that adds a custom backdrop image to your Letterboxd profile without paying for Patron. ",
   "version": "1",
   "author": "Lukas Wigger",
-  "homepage_url": "https://github.com/LukasW01/Letterboxd-Backdrop.git",
+  "homepage_url": "https://gitlab.com/LukasW01/Letterboxd-Backdrop.git",
   "manifest_version": 3,
   "action": {
     "default_title": "Letterboxd-Backdrop",
@@ -11,15 +11,16 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://letterboxd.com/*"],
-      "js": ["js/letterboxd.js"],
-      "run_at": "document_idle"
+      "matches": ["https://letterboxd.com/*"],
+      "js": ["letterboxd.js"]
     }
   ],
   "icons": {
     "500": "img/letterboxd.png"
   },
   "permissions": [
-    "storage"
+    "tabs",
+    "storage",
+    "activeTab"
   ]
 }

@@ -5,7 +5,7 @@ import polyfill from "webextension-polyfill";
 import "./css/tailwind.css";
 
 const App = () => {
-    const currentYear = new Date().getFullYear();
+    const currentYear : number = new Date().getFullYear();
 
     const [errorText, setErrorText] = useState("");
     const [error, setError] = useState(false);
@@ -15,7 +15,7 @@ const App = () => {
 
     useEffect(async () => {
         try {
-            const result = await polyfill.storage.local.get("image");
+            const result : Record<string, any> = await polyfill.storage.local.get("image");
             if (result.image) {
                 setImageValue(result.image);
             }

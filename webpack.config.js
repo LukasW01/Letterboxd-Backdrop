@@ -1,9 +1,6 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const fs = require('fs');
-
-
 
 module.exports = {
     mode: 'production',
@@ -41,30 +38,8 @@ module.exports = {
             filename: 'popup.html',
             chunks: ['popup'],
         }),
-        {
-            apply: (compiler) => {
-                compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
-                    if (!fs.existsSync('./dist/js')) {
-                        fs.mkdirSync('./dist/js');
-                    }
-                    fs.renameSync('./dist/letterboxd.js', './dist/js/letterboxd.js');
-                });
-            },
-        },
-
     ],
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
-    },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendors',
-                    chunks: 'all',
-                },
-            },
-        },
     },
 };
