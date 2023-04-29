@@ -15,6 +15,12 @@
       "js": ["js/letterboxd.js"]
     }
   ],
+  "web_accessible_resources": [
+    {
+      "resources": ["js/letterboxd.js"],
+      "matches": ["https://letterboxd.com/*"]
+    }
+  ],
   "icons": {
     "500": "img/letterboxd.png"
   },
