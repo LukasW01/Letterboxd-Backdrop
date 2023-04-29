@@ -12,11 +12,11 @@
   "content_scripts": [
     {
       "matches": ["https://letterboxd.com/*"],
-      "js": ["scripts/letterboxd.js"]
+      "js": ["js/letterboxd.js"]
     }
   ],
   "icons": {
-    "500": "images/letterboxd.png"
+    "500": "img/letterboxd.png"
   },
   "permissions": [
     "storage"

@@ -3,10 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const fs = require('fs');
 
+
+
 module.exports = {
     mode: 'production',
     entry: {
-        letterboxd: './src/scripts/letterboxd.ts',
+        letterboxd: './src/js/letterboxd.ts',
         popup: './src/popup.tsx',
     },
     output: {
@@ -30,8 +32,8 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 { from: './src/manifest.json', to: './' },
-                { from: './src/styles', to: './styles' },
-                { from: './src/images', to: './images' },
+                { from: './src/css', to: './css' },
+                { from: './src/img', to: './img' },
             ]
         }),
         new HtmlWebpackPlugin({
@@ -42,13 +44,14 @@ module.exports = {
         {
             apply: (compiler) => {
                 compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
-                    if (!fs.existsSync('./dist/scripts')) {
-                        fs.mkdirSync('./dist/scripts');
+                    if (!fs.existsSync('./dist/js')) {
+                        fs.mkdirSync('./dist/js');
                     }
-                    fs.renameSync('./dist/letterboxd.js', './dist/scripts/letterboxd.js');
+                    fs.renameSync('./dist/letterboxd.js', './dist/js/letterboxd.js');
                 });
             },
         },
+
     ],
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
