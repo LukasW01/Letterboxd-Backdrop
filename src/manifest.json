@@ -11,14 +11,9 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://letterboxd.com/*"],
-      "js": ["js/letterboxd.js"]
-    }
-  ],
-  "web_accessible_resources": [
-    {
-      "resources": ["js/letterboxd.js"],
-      "matches": ["https://letterboxd.com/*"]
+      "matches": ["*://letterboxd.com/*"],
+      "js": ["js/letterboxd.js"],
+      "run_at": "document_idle"
     }
   ],
   "icons": {
