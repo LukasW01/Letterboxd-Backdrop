@@ -1,8 +1,12 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
+// @ts-ignore
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+// @ts-ignore
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import * as path from 'path';
+import * as webpack from 'webpack';
 
-module.exports = {
+
+const config: webpack.Configuration = {
     mode: 'production',
     entry: {
         letterboxd: './src/js/letterboxd.ts',
@@ -15,12 +19,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
+                test: /.tsx?$/,
                 exclude: /node_modules/,
                 use: 'ts-loader',
             },
             {
-                test: /\.css$/,
+                test: /.css$/,
                 use: ['style-loader', 'css-loader']
             }
         ],
@@ -43,3 +47,5 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js'],
     },
 };
+
+export default config;

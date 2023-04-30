@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build:webpack": "webpack && web-ext build --source-dir=dist --overwrite-dest",
-    "build:tailwind": "pnpx tailwindcss build src/css/tail.css -o src/css/tailwind.css",
-    "build:all" : "pnpx tailwindcss build src/css/tail.css -o src/css/tailwind.css && webpack && web-ext build --source-dir=dist --overwrite-dest"
+    "build:tailwind": "pnpx tailwindcss build src/css/tail.css -o src/css/wind.css",
+    "build:all": "pnpx tailwindcss build src/css/tail.css -o src/css/wind.css && webpack && web-ext build --source-dir=dist --overwrite-dest"
   },
   "dependencies": {
     "@types/webextension-polyfill": "^0.10.0",
@@ -15,14 +15,20 @@
     "react-scripts": "^5.0.1",
     "style-loader": "^3.3.2",
     "ts-loader": "^9.4.2",
-    "typescript": "^5.0.4",
     "web-ext": "^7.6.2",
     "webextension-polyfill": "^0.10.0",
     "webpack": "^5.81.0",
     "webpack-cli": "^5.0.2"
   },
   "devDependencies": {
+    "@types/node": "^18.16.3",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "@types/webpack": "^5.28.1",
+    "@types/webpack-dev-server": "^4.7.2",
     "css-loader": "^6.7.3",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   }
 }

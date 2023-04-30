@@ -1,49 +1,59 @@
 import React, {useState, useEffect} from "react";
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 import polyfill from "webextension-polyfill";
 
-import "./css/tailwind.css";
+import "./css/wind.css";
 
 const App = () => {
-    const currentYear : number = new Date().getFullYear();
+    const currentYear: number = new Date().getFullYear();
 
-    const [errorText, setErrorText] = useState("");
-    const [error, setError] = useState(false);
-    const [imageValue, setImageValue] = useState("");
-    const urlRegex: RegExp = /^https?:\/\/[^\s/$.?#]+\.ltrbxd\.com\/.+$/;
-    const imgRegex: RegExp = /.(jpeg|jpg|gif|png|webp)$/;
+    const [errorText, setErrorText]: [string, ((value: (((prevState: string) => string) | string)) => void)] = useState("");
+    const [error, setError]: [boolean, ((value: (((prevState: boolean) => boolean) | boolean)) => void)] = useState(false);
+    const [imageValue, setImageValue]: [string, ((value: (((prevState: string) => string) | string)) => void)] = useState("");
+    const [wasSaved, setWasSaved]: [boolean, ((value: (((prevState: boolean) => boolean) | boolean)) => void)] = useState(false);
 
-    useEffect(async () => {
+    async function loadValue(): Promise<void> {
         try {
-            const result : Record<string, any> = await polyfill.storage.local.get("image");
+            const result: Record<string, any> = await polyfill.storage.local.get('image');
             if (result.image) {
                 setImageValue(result.image);
             }
         } catch (error) {
             console.error(`Error: ${error}`);
         }
-    }, []);
+    }
 
-    const handleEvent = async (): Promise<void> => {
+    const checkInput = async (): Promise<boolean> => {
+        const urlRegex: RegExp = /^https?:\/\/[^\s/$.?#]+\.ltrbxd\.com/;
+        const imgRegex: RegExp = /.(jpeg|jpg|gif|png|webp)$/;
 
         if (imageValue === "") {
             console.log("Input is empty");
+            return false;
         }
-        else if (!urlRegex.test(imageValue)) {
+
+        if (!urlRegex.test(imageValue)) {
             setErrorText("Input is not a valid URL from ltrbxd.com");
             setError(true);
-        } else if (!imgRegex.test(imageValue)) {
+            return false;
+        }
+
+        if (!imgRegex.test(imageValue)) {
             setErrorText("Input does not contain an image");
             setError(true);
-        } else {
-            console.log("Input is valid and contains an image");
+            return false;
+        }
 
+        console.log("All checks OK!");
+        return true;
+    };
+
+
+
+    const handleEvent = async (): Promise<void> => {
+        if(await checkInput()) {
             try {
                 await polyfill.storage.local.set({image: imageValue});
-
-                setErrorText("Image saved. Reload your Letterboxd-profile to apply the changes.");
-                setError(false); // Reset error
-
                 /*
                 polyfill.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
                     const letterboxdUrlRegex = /^https?:\/\/letterboxd\.com\//;
@@ -51,15 +61,45 @@ const App = () => {
                     if (tabs[0] && tabs[0].url && letterboxdUrlRegex.test(tabs[0].url)) {
                         polyfill.tabs.reload(tabs[0].id);
                     }
-                });
+                 });
                  */
-            } catch (error) {
-                console.error(`Error: ${error}`);
-            }
 
+                setErrorText("Image saved.");
+                setError(false);
+                setWasSaved(true);
+            } catch (err) {
+                console.log(err);
+            }
         }
     };
 
+    const handleReset = async ():Promise<void> => {
+        if (wasSaved) {
+            try {
+                await polyfill.storage.local.remove('image');
+                /*
+                polyfill.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
+                   const letterboxdUrlRegex = /^https?:\/\/letterboxd\.com\//;
+
+                    if (tabs[0] && tabs[0].url && letterboxdUrlRegex.test(tabs[0].url)) {
+                        polyfill.tabs.reload(tabs[0].id);
+                    }
+                });
+                */
+
+                setErrorText("Image Removed.");
+                setImageValue("");
+                setError(false);
+                setWasSaved(false);
+            } catch (err) {
+                console.log(err);
+            }
+        }
+    }
+
+    useEffect(():void => {
+        loadValue().then((r:void):void => {});
+    }, []);
 
     return (
         <main>
@@ -81,12 +121,21 @@ const App = () => {
                     <input
                         type="text"
                         id="imageValue"
-                        className="flex-1 border text-gray-400 text-sm rounded block p-1 bg-gray-700 border-gray-600 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+                        className="flex-1 border text-sm rounded block p-1 bg-gray-700 border-gray-600 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 text-white h-9"
                         placeholder="https://ltrbxd.com/image.jpg"
                         value={imageValue}
-                        onChange={(e) => setImageValue(e.target.value)}
-                        onBlur={handleEvent}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
+                            setImageValue(e.target.value);
+                        }}
+                        onKeyUp={handleEvent}
                     />
+                    <button
+                        type="button"
+                        className="py-2 px-1 mr-2 mb-0.5 text-sm ml-1 font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 flex items-center justify-center"
+                        onClick={handleReset}
+                    >
+                        Delete Image
+                    </button>
                 </div>
             </div>
             {errorText && (
@@ -108,7 +157,7 @@ const App = () => {
                             <span className="mt-1 text-sm text-gray-200">: {errorText}</span>
                         </div>
                         <button
-                            onClick={() => {
+                            onClick={():void => {
                                 setErrorText("");
                                 setError(false);
                             }}
@@ -119,7 +168,7 @@ const App = () => {
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                stroke-width="1.5"
+                                strokeWidth="1.5"
                                 stroke="currentColor"
                                 className="h-6 w-6"
                             >
