@@ -17,6 +17,7 @@ const App = () => {
             const result: Record<string, any> = await polyfill.storage.local.get('image');
             if (result.image) {
                 setImageValue(result.image);
+                setWasSaved(true)
             }
         } catch (error) {
             console.error(`Error: ${error}`);
@@ -50,7 +51,7 @@ const App = () => {
 
 
 
-    const handleEvent = async (): Promise<void> => {
+    const handleEvent = async ():Promise<void> => {
         if(await checkInput()) {
             try {
                 await polyfill.storage.local.set({image: imageValue});
@@ -73,7 +74,7 @@ const App = () => {
         }
     };
 
-    const handleReset = async ():Promise<void> => {
+    const handleRemove = async ():Promise<void> => {
         if (wasSaved) {
             try {
                 await polyfill.storage.local.remove('image');
@@ -132,7 +133,7 @@ const App = () => {
                     <button
                         type="button"
                         className="py-2 px-1 mr-2 mb-0.5 text-sm ml-1 font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 flex items-center justify-center"
-                        onClick={handleReset}
+                        onClick={handleRemove}
                     >
                         Delete Image
                     </button>
@@ -145,7 +146,7 @@ const App = () => {
                         error ? "text-red-500" : "text-green-500"
                     }  animate-slide-in flex`}
                 >
-                    <div className="gap-4 flex items-center">
+                    <div className="gap-4 flex items-center justify-between">
                         <div>
                             <strong
                                 className={`font-medium ${
