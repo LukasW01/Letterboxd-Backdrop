@@ -12,7 +12,7 @@ const App = () => {
     const [imageValue, setImageValue]: [string, ((value: (((prevState: string) => string) | string)) => void)] = useState("");
     const [wasSaved, setWasSaved]: [boolean, ((value: (((prevState: boolean) => boolean) | boolean)) => void)] = useState(false);
 
-    async function loadValue(): Promise<void> {
+    const loadValue = async ():Promise<void> => {
         try {
             const result: Record<string, any> = await polyfill.storage.local.get('image');
             if (result.image) {
@@ -24,7 +24,7 @@ const App = () => {
         }
     }
 
-    const checkInput = async (): Promise<boolean> => {
+    const checkInput = ():boolean  => {
         const urlRegex: RegExp = /^https?:\/\/[^\s/$.?#]+\.ltrbxd\.com/;
         const imgRegex: RegExp = /.(jpeg|jpg|gif|png|webp)$/;
 
@@ -52,7 +52,7 @@ const App = () => {
 
 
     const handleEvent = async ():Promise<void> => {
-        if(await checkInput()) {
+        if(checkInput()) {
             try {
                 await polyfill.storage.local.set({image: imageValue});
                 /*
