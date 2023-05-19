@@ -1,10 +1,9 @@
 {
   "name": "Letterboxd-Backdrop",
   "description": "Browser extension that adds a custom backdrop image to your Letterboxd profile without paying for Patron. ",
-  "version": "1",
   "author": "Lukas Wigger",
-  "homepage_url": "https://gitlab.com/LukasW01/Letterboxd-Backdrop.git",
   "manifest_version": 3,
+  "version": "1.1",
   "action": {
     "default_title": "Letterboxd-Backdrop",
     "default_popup": "popup.html"
