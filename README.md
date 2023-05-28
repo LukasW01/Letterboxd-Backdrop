@@ -3,7 +3,7 @@ Browser extension that adds a custom backdrop image to your Letterboxd profile. 
 
 Note: This extension is not affiliated with Letterboxd in any way.
 
-![letterboxd-profile](files/letterboxd-profile.png)
+![letterboxd-profile](data/letterboxd-profile.png)
 
 ###  Getting Started
 
