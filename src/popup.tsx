@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import ReactDOM from "react-dom";
 import polyfill from "webextension-polyfill";
 
-import "./css/wind.css";
+import "./css/tailwind.css";
 
 const App = () => {
     const currentYear: number = new Date().getFullYear();
