@@ -17,7 +17,7 @@ const App = () => {
             const result: Record<string, any> = await polyfill.storage.local.get('image');
             if (result.image) {
                 setImageValue(result.image);
-                setWasSaved(true)
+                setWasSaved(true);
             }
         } catch (error) {
             console.error(`Error: ${error}`);
