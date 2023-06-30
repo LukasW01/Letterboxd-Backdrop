@@ -181,7 +181,7 @@ const App = () => {
             )}
             <div className="mx-4 mb-2 border-gray-400 relative flex">
                 <p className="mt-2 line-clamp-3 text-gray-400 text-center">
-                    © <span>{currentYear}</span> - <span>Lukas Wigger</span>. All rights reserved. Licensed under <a
+                    © <span>{currentYear}</span> - <span>Lukas</span>. Licensed under <a
                     href={"https://en.wikipedia.org/wiki/MIT_License"} target="_blank" className="text-blue-500">MIT</a>.
                 </p>
             </div>

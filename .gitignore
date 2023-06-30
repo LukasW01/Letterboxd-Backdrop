@@ -17,6 +17,8 @@ migrate_working_dir/
 # Build
 /dist/
 /web-ext-artifacts/
+# TailwindCSS
+tailwind.css
 
 # npm
 node_modules/*

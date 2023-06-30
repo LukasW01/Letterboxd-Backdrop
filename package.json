@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build:webpack": "webpack && web-ext build --source-dir=dist --overwrite-dest",
-    "build:tailwind": "pnpx tailwindcss build src/css/tail.css -o src/css/wind.css",
-    "build:all": "pnpx tailwindcss build src/css/tail.css -o src/css/wind.css && webpack && web-ext build --source-dir=dist --overwrite-dest"
+    "build:tailwind": "pnpx tailwindcss build src/css/tail-wind.css -o src/css/tailwind.css",
+    "build:all": "pnpx tailwindcss build src/css/tail-wind.css -o src/css/tailwind.css && webpack && web-ext build --source-dir=dist --overwrite-dest"
   },
   "dependencies": {
     "@types/webextension-polyfill": "^0.10.0",
