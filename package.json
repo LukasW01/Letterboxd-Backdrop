@@ -1,6 +1,6 @@
 {
   "name": "letterboxd-backdrop",
-  "version": "1.0.0",
+  "version": "1.2",
   "scripts": {
     "build:webpack": "webpack && web-ext build --source-dir=dist --overwrite-dest",
     "build:tailwind": "pnpx tailwindcss build src/css/tail-wind.css -o src/css/tailwind.css",
