@@ -1,0 +1,46 @@
+image: node:alpine
+
+cache:
+  key:
+    files:
+      - pnpm-lock.yaml
+  paths:
+    - node_modules/
+    - .pnpm-store/
+
+before_script:
+  - corepack enable
+  - corepack prepare pnpm@latest-8 --activate
+  - pnpm config set store-dir .pnpm-store
+
+stages:
+  - build
+  - lint
+  - test
+
+
+build:
+  stage: build
+  only:
+    - merge_requests
+    - staging
+    - production
+  script:
+    - pnpm i
+    - pnpm build:all
+  tags:
+    - shared
+
+lint:code:
+  stage: lint
+  needs: [build]
+  script:
+    - pnpm lint:quiet
+
+
+test:
+  stage: test
+  needs: [build]
+  script:
+    - pnpm test:ci
+
