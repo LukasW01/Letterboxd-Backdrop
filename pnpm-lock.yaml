@@ -11,9 +11,6 @@ dependencies:
   copy-webpack-plugin:
     specifier: ^11.0.0
     version: 11.0.0(webpack@5.81.0)
-  eject:
-    specifier: ^0.0.4
-    version: 0.0.4
   eslint-plugin-import:
     specifier: ^2.9.0
     version: 2.27.5(@typescript-eslint/parser@6.9.0)(eslint@8.52.0)
@@ -3434,10 +3431,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: false
 
-  /adhere@1.2.3:
-    resolution: {integrity: sha512-1ItBtLjSW2yNZ6gSaHeir5X3Om77u9H2iQuGoPMMHZMGpzTARRFMqPqr5Lz4LVMFWOBZO6U4P9GG7A8+j7n1pw==}
-    dev: false
-
   /adjust-sourcemap-loader@4.0.0:
     resolution: {integrity: sha512-OXwN5b9pCUXNQHJpwwD2qP40byEmSgzj8B4ydSN0uMNYWiFmJ6x6KwUllMmfk8Rwu/HJDFR7U8ubsWBoN0Xp0A==}
     engines: {node: '>=8.9'}
@@ -4136,10 +4129,6 @@ packages:
       mimic-response: 4.0.0
       normalize-url: 8.0.0
       responselike: 3.0.0
-    dev: false
-
-  /cadence@1.0.12:
-    resolution: {integrity: sha512-9YJbhySTUaMBKz3IVcXbpw70K7swnBlD/LFY59zfwZ5U5sHXvZQUCCHSPdENdCKQ4XmN+GpFJrGF/yBZ73jMMw==}
     dev: false
 
   /call-bind@1.0.2:
@@ -5254,14 +5243,6 @@ packages:
 
   /ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
-    dev: false
-
-  /eject@0.0.4:
-    resolution: {integrity: sha512-9tG0AOcZFxjQeZMCrUufZ2+118vMoy4SXN8O3M/di2yotk5ILERUoGKb5D1sR4EI3OjiAzAl0RTZ1OjiFAJ0XQ==}
-    dependencies:
-      adhere: 1.2.3
-      cadence: 1.0.12
-      interrupt: 1.2.0
     dev: false
 
   /ejs@3.1.9:
@@ -7020,12 +7001,6 @@ packages:
   /interpret@3.1.1:
     resolution: {integrity: sha512-6xwYfHbajpoF0xLW+iwLkhwgvLoZDfjYfoFNu8ftMoXINzwuymNLd9u/KmwtdT2GbR+/Cz66otEGEVVUHX9QLQ==}
     engines: {node: '>=10.13.0'}
-
-  /interrupt@1.2.0:
-    resolution: {integrity: sha512-tLNebsqj9FHpUONB39XnYLtf6s62WPN2bV4j4EoqWsjsEHCIy8s9/wsogcWJg7T2Us11BjBKXvrRNRIRf+Kq2A==}
-    dependencies:
-      supersede: 1.0.6
-    dev: false
 
   /invert-kv@3.0.1:
     resolution: {integrity: sha512-CYdFeFexxhv/Bcny+Q0BfOV+ltRlJcd4BBZBYFX/O0u4npJrgZtIcjokegtiSMAvlMTJ+Koq0GBCc//3bueQxw==}
@@ -11639,10 +11614,6 @@ packages:
       mz: 2.7.0
       pirates: 4.0.5
       ts-interface-checker: 0.1.13
-
-  /supersede@1.0.6:
-    resolution: {integrity: sha512-68MKSJ+nGtjpQS7ckOvFiCydPY+2sz6iXmC3+/BkCqnaA/UtGOkcY2H5WOKZF9Xo5GUU+LK9ZfSzXVOre9H0rQ==}
-    dev: false
 
   /supports-color@5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
