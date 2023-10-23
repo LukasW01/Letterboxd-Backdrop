@@ -18,29 +18,33 @@ stages:
   - lint
   - test
 
+install:
+  stage: install
+  script:
+    - pnpm i
+
 
 build:
   stage: build
-  only:
-    - merge_requests
-    - staging
-    - production
+  dependencies:
+    - install
   script:
-    - pnpm i
     - pnpm build:all
   tags:
     - shared
 
 lint:code:
   stage: lint
-  needs: [build]
+  dependencies:
+    - install
   script:
     - pnpm lint:quiet
 
 
 test:
   stage: test
-  needs: [build]
+  dependencies:
+    - install
   script:
     - pnpm test:ci
 
