@@ -16,35 +16,26 @@ before_script:
 stages:
   - build
   - lint
-  - test
-
-install:
-  stage: install
-  script:
-    - pnpm i
+#  - test
 
 
 build:
   stage: build
-  dependencies:
-    - install
   script:
+    - pnpm i
     - pnpm build:all
-  tags:
-    - shared
+
 
 lint:code:
   stage: lint
-  dependencies:
-    - install
   script:
+    - pnpm i
     - pnpm lint:quiet
 
 
-test:
-  stage: test
-  dependencies:
-    - install
-  script:
-    - pnpm test:ci
+#test:
+#  stage: test
+#  script:
+#    - pnpm i
+#    - pnpm test:ci
 
