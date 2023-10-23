@@ -26,11 +26,11 @@ build:
     - pnpm build:all
 
 
-lint:code:
+lint:
   stage: lint
   script:
     - pnpm i
-    - pnpm lint:quiet
+    - pnpm lint
 
 
 #test:

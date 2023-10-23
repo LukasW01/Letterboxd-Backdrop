@@ -31,6 +31,6 @@ const backdrop = (url: string): void => {
             }
         }
     } catch (err) {
-        console.error(err)
+        console.error(err);
     }
 })();

@@ -3,7 +3,7 @@ import React from "react";
 type Button = {
     event: () => void;
     text?: string;
-}
+};
 
 const Button: React.FC<Button> = (props: Button) => {
     return (
@@ -14,6 +14,6 @@ const Button: React.FC<Button> = (props: Button) => {
             {props.text ?? `Delete Image`}
         </button>
     );
-}
+};
 
 export default Button;

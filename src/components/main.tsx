@@ -5,7 +5,7 @@ type Main = {
     alt?: string;
     link?: string;
     paragraph: string;
-}
+};
 
 const Main: React.FC<Main> = (props: Main) => {
     return (

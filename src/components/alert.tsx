@@ -5,12 +5,12 @@ type Alert = {
     text: string;
 };
 
-const AlertComponent: React.FC<Alert> = (props: Alert): ReactElement<any, any> | null => {
+const Alert: React.FC<Alert> = (props: Alert): ReactElement<string, string> | null => {
     const [show, setShow]: [boolean, ((value: (((prevState: boolean) => boolean) | boolean)) => void)] = useState(true);
 
     const dismissAlert = (): void => {
         setShow(false);
-    }
+    };
 
     return (
         show && props.text != '' ? (
@@ -32,4 +32,4 @@ const AlertComponent: React.FC<Alert> = (props: Alert): ReactElement<any, any> |
     );
 };
 
-export default AlertComponent;
+export default Alert;
