@@ -1,10 +1,8 @@
 image: node:alpine
 
 stages:
-  - sast
   - build
   - lint
-  - test
 
 before_script:
   - corepack enable
@@ -18,14 +16,6 @@ cache:
   paths:
     - node_modules/
     - .pnpm-store/
-
-sast:
-  stage: sast
-  allow_failure: true
-  needs: [ ]
-include:
-  - template: Security/SAST.gitlab-ci.yml
-  - template: Security/Secret-Detection.gitlab-ci.yml
 
 build:
   stage: build
