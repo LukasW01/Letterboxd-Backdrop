@@ -1,5 +1,16 @@
 image: node:alpine
 
+stages:
+  - sast
+  - build
+  - lint
+  - test
+
+before_script:
+  - corepack enable
+  - corepack prepare pnpm@latest-8 --activate
+  - pnpm config set store-dir .pnpm-store
+
 cache:
   key:
     files:
@@ -8,23 +19,23 @@ cache:
     - node_modules/
     - .pnpm-store/
 
-before_script:
-  - corepack enable
-  - corepack prepare pnpm@latest-8 --activate
-  - pnpm config set store-dir .pnpm-store
-
-stages:
-  - build
-  - lint
-#  - test
-
+sast:
+  stage: sast
+  allow_failure: true
+  needs: [ ]
+include:
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
 
 build:
   stage: build
   script:
     - pnpm i
     - pnpm build:all
-
+  artifacts:
+    when: always
+    paths:
+      - web-ext-artifacts/*.zip
 
 lint:
   stage: lint
@@ -32,10 +43,8 @@ lint:
     - pnpm i
     - pnpm lint
 
-
-#test:
-#  stage: test
+#jest:
+#  stage: jest
 #  script:
 #    - pnpm i
 #    - pnpm test:ci
-
