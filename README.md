@@ -5,7 +5,7 @@ Note: This extension is not affiliated with Letterboxd in any way.
 
 ![letterboxd-profile](data/letterboxd-profile.png)
 
-###  Getting Started
+##  Getting Started
 
 Install packages:
 
@@ -19,6 +19,6 @@ Build the extension:
 pnpm build:all
 ```
 
-### License
+## License
 
 This program is licensed under the MIT-License. See the "LICENSE" file for more information
