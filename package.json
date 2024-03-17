@@ -6,19 +6,27 @@
     "build:tailwind": "pnpx tailwindcss build src/css/tail-wind.css -o src/css/tailwind.css",
     "build:all": "pnpx tailwindcss build src/css/tail-wind.css -o src/css/tailwind.css && webpack && web-ext build --source-dir=dist --overwrite-dest",
     "lint": "eslint src/**/*.ts*",
-    "test:ci": "pnpx jest"
+    "test:ci": "pnpx jest --ci --testResultsProcessor='jest-junit'"
   },
   "jest": {
-    "testPathDirs": [
-      "app/"
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "(/__test__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
     ]
   },
   "dependencies": {
     "@types/webextension-polyfill": "^0.10.0",
+    "axios": "^1.6.8",
     "copy-webpack-plugin": "^12.0.2",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-react": "^7.34.0",
     "html-webpack-plugin": "^5.5.1",
+    "jest-junit": "^16.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
@@ -30,16 +38,12 @@
     "webpack-cli": "^5.0.2"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.23.3",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.11.24",
-    "@types/react": "^18.2.64",
-    "@types/react-dom": "^18.2.21",
     "@types/node": "^20.11.26",
     "@types/react": "^18.2.63",
     "@types/react-dom": "^18.2.1",
     "@types/webpack": "^5.28.1",
-    "@typescript-eslint/eslint-plugin": "^6.17.0",
-    "@typescript-eslint/parser": "^6.9.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^6.21.0",
     "css-loader": "^6.10.0",
@@ -48,6 +52,7 @@
     "tailwindcss": "^3.4.0",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.2"
   }
 }

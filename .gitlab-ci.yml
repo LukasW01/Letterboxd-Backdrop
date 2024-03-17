@@ -33,8 +33,12 @@ lint:
     - pnpm i
     - pnpm lint
 
-#jest:
-#  stage: jest
-#  script:
-#    - pnpm i
-#    - pnpm test:ci
+jest:
+  stage: jest
+  script:
+    - pnpm i
+    - pnpm test:ci
+  artifacts:
+    when: always
+    reports:
+      junit: junit.xml

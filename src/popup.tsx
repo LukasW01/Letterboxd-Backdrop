@@ -37,7 +37,7 @@ const App = () => {
                 setError({text: "Image saved.", bool: false,});
                 setSaved(true);
             } catch (err) {
-                console.log(err);
+                console.error(err);
             }
         } else {
             setError({text: "Input does not contain a valid Letterboxd image URL or does not contain an image", bool: true,});
@@ -56,7 +56,7 @@ const App = () => {
                 setImage("");
                 setSaved(false);
             } catch (err) {
-                console.log(err);
+                console.error(err);
             }
         }
     }

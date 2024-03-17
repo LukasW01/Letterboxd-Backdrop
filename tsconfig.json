@@ -11,7 +11,7 @@
     "jsx": "react"
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",  "jest.config.ts"
   ],
   "exclude": [
     "node_modules"
