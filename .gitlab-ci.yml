@@ -1,8 +1,8 @@
 image: node:alpine
 
 stages:
+  - test
   - build
-  - lint
 
 before_script:
   - corepack enable
@@ -28,13 +28,13 @@ build:
       - web-ext-artifacts/*.zip
 
 lint:
-  stage: lint
+  stage: test
   script:
     - pnpm i
     - pnpm lint
 
 jest:
-  stage: jest
+  stage: test
   script:
     - pnpm i
     - pnpm test:ci
