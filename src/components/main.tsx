@@ -10,7 +10,7 @@ type Main = {
 const Main: React.FC<Main> = (props: Main) => {
     return (
         <div className="p-4 flex flex-col items-start text-justify justify-between mx-auto">
-            <a href={props.link ?? 'https://gitlab.com/LukasW01/Letterboxd-Backdrop'} target="_blank">
+            <a href={props.link ?? 'https://gitlab.com/LukasW01/Letterboxd-Backdrop'} target="_blank" rel="noopener noreferrer">
                 <img src={props.image ?? 'img/letterboxd-logo.svg'} alt={props.alt ?? 'Letterboxd'} className="ml-10 h-12 w-full object-cover justify-center"/>
             </a>
             <div>
