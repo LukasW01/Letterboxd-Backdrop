@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import polyfill, {Tabs} from "webextension-polyfill";
 import Alert from "./components/alert";
 import Button from "./components/button";
@@ -11,20 +11,18 @@ import "./css/tailwind.css";
 
 const App = () => {
     const [image, setImage]: [string, ((value: (((prevState: string) => string) | string)) => void)] = useState("");
-    const [saved, setSaved]: [boolean, ((value: (((prevState: boolean) => boolean) | boolean)) => void)] = useState(false);
     const [error, setError]: [{text: string; bool: boolean }, ((value: (((prevState: {text: string; bool: boolean }) => {text: string; bool: boolean }) | {text: string; bool: boolean })) => void)] = useState<{ text: string; bool: boolean }>({ text: "", bool: false });
 
     const loadValue = async (): Promise<void> => {
         try {
-            const result: Record<string, any> = await polyfill.storage.local.get('image');
+            const result: Record<string, string> = (await polyfill.storage.local.get('image')) as Record<string, string>;
             if (result.image) {
                 setImage(result.image);
-                setSaved(true);
             }
         } catch (err) {
             console.error(err);
         }
-    }
+    };
 
     const setValue = async (): Promise<void> => {
         if (checkInput(image)) {
@@ -35,7 +33,7 @@ const App = () => {
                 });
 
                 setError({text: "Image saved.", bool: false,});
-                setSaved(true);
+                setImage(image);
             } catch (err) {
                 console.error(err);
             }
@@ -45,7 +43,7 @@ const App = () => {
     };
 
     const removeValue = async (): Promise<void> => {
-        if (saved) {
+        if (image) {
             try {
                 await polyfill.storage.local.remove('image');
                 polyfill.tabs.query({ active: true, currentWindow: true }).then((tabs: Tabs.Tab[]): void => {
@@ -54,15 +52,14 @@ const App = () => {
 
                 setError({text: "Image removed.", bool: false,});
                 setImage("");
-                setSaved(false);
             } catch (err) {
                 console.error(err);
             }
         }
-    }
+    };
 
     useEffect((): void => {
-        loadValue().then((r: void): void => {});
+        loadValue().then((): void => {});
     }, []);
 
     return  (
@@ -83,5 +80,4 @@ const App = () => {
     );
 };
 
-ReactDOM.render(<App/>, document.getElementById("root"));
-
+ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
