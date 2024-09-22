@@ -2,7 +2,7 @@ import React from "react";
 
 type Input = {
     value: string;
-    setValue: ((value: (((prevState: string) => string) | string)) => void);
+    setValue: ((value: string) => void);
     event: (event: React.KeyboardEvent) => void;
     placeholder?: string;
 };

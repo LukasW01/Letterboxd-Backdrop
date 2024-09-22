@@ -1,5 +1,6 @@
 import polyfill from "webextension-polyfill";
 import axios, {AxiosResponse} from "axios";
+import { tryCatch } from "../util/throw";
 
 const backdrop = (url: string): void => {
     const bodyElement: boolean = document.querySelector('body')?.classList.contains('my-own-page') ?? false;
@@ -23,19 +24,21 @@ const backdrop = (url: string): void => {
 
 
 (async (): Promise<void> => {
-    try {
-        const result: Record<string, string> = (await polyfill.storage.local.get('image')) as Record<string, string>;
-        if (result) {
-            try {
-                const response: AxiosResponse<Response> = await axios.get(result.image);
-                if (response.status === 200) {
-                    backdrop(result.image);
-                }
-            } catch (err) {
-                console.error(err);
-            }
+    const [error, result] = await tryCatch(polyfill.storage.local.get('image')) as [Error, Record<string, string>];
+    if (error) {
+        console.error(error);
+        return;
+    }
+
+    if (result) {
+        const [errorResponse, response] = await tryCatch(axios.get(result.image).catch((error: Error) => error)) as [Error, AxiosResponse<Response>];
+        if (errorResponse) {
+            console.error(errorResponse);
+            return;
         }
-    } catch (err) {
-        console.error(err);
+
+        if (response.status === 200) {
+            backdrop(result.image);
+        }
     }
 })();

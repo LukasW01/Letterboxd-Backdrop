@@ -1,4 +1,4 @@
-import {checkInput} from "../src/js/util/validation";
+import {checkInput} from "../src/util/validation";
 
 describe("Validation", (): void => {
     test("checkInput returns true for valid input", (): void => {
