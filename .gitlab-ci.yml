@@ -1,8 +1,7 @@
 image: node:alpine
 
 stages:
-  - test
-  - build
+  - npm
 
 before_script:
   - corepack enable
@@ -18,7 +17,7 @@ cache:
     - .pnpm-store/
 
 build:
-  stage: build
+  stage: npm
   script:
     - pnpm i
     - pnpm build:all
@@ -28,13 +27,13 @@ build:
       - web-ext-artifacts/*.zip
 
 lint:
-  stage: test
+  stage: npm
   script:
     - pnpm i
     - pnpm lint
 
 jest:
-  stage: test
+  stage: npm
   script:
     - pnpm i
     - pnpm test:ci
