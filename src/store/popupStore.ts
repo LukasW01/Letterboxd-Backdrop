@@ -51,9 +51,9 @@ const usePopupStore = create<PopupStore>((set, get) => ({
             return;
         }
         
-        const [errorPolifill] = await tryCatch(polyfill.storage.local.set({ image: get().image }));
-        if (errorPolifill) {
-            console.error(errorPolifill);
+        const [error] = await tryCatch(polyfill.storage.local.set({ image: get().image }));
+        if (error) {
+            console.error(error);
             return;
         } else {
             set({ error: { text: 'Image saved.', bool: false } });
