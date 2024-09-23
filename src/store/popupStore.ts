@@ -1,7 +1,15 @@
 import { tryCatch } from '../util/throw';
-import { checkInput } from '../util/validation';
 import polyfill, { Tabs } from "webextension-polyfill";
 import { create } from 'zustand';
+import * as yup from 'yup';
+
+const schema = yup.object().shape({
+    image: yup.string()
+        .required()
+        .url()
+        .matches(/^https?:\/\/[^\s/$.?#]+\.ltrbxd\.com(\?[^#\s]*)?.*\.(jpeg|jpg|gif|png|webp)$/),
+});
+
 
 interface Error {
     text: string;
@@ -38,8 +46,8 @@ const usePopupStore = create<PopupStore>((set, get) => ({
     },
 
     setValue: async (): Promise<void> => {
-        if (!checkInput(get().image)) {
-            get().setError({ text: 'Invalid URL or image.', bool: true });
+        if (!schema.isValidSync(get())) {
+            set({ error: { text: 'Invalid URL or image.', bool: true } });
             return;
         }
         
@@ -48,8 +56,8 @@ const usePopupStore = create<PopupStore>((set, get) => ({
             console.error(errorPolifill);
             return;
         } else {
-            get().setError({ text: 'Image saved.', bool: false });
-            get().setImage(get().image);
+            set({ error: { text: 'Image saved.', bool: false } });
+            set({ image: get().image });
         }
 
         polyfill.tabs.query({ active: true, currentWindow: true }).then((tabs: Tabs.Tab[]): void => {
@@ -65,8 +73,8 @@ const usePopupStore = create<PopupStore>((set, get) => ({
                 console.error(error);
                 return;
             } else {
-                get().setError({ text: 'Image removed.', bool: false });
-                get().setImage('');
+                set({ error: { text: 'Image removed.', bool: false } });
+                set({ image: '' });
             }
 
             polyfill.tabs.query({ active: true, currentWindow: true }).then((tabs: Tabs.Tab[]): void => {
