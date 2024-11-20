@@ -2,9 +2,9 @@
   "name": "letterboxd-backdrop",
   "version": "1.4",
   "scripts": {
-    "build:webpack": "webpack && web-ext build --source-dir=dist --overwrite-dest",
+    "build:esbuild": "node esbuild.config.mjs",
     "build:tailwind": "pnpx tailwindcss build src/css/tail-wind.css -o src/css/tailwind.css",
-    "build:all": "pnpx tailwindcss build src/css/tail-wind.css -o src/css/tailwind.css && webpack && web-ext build --source-dir=dist --overwrite-dest",
+    "build:all": "pnpx tailwindcss build src/css/tail-wind.css -o src/css/tailwind.css && node esbuild.config.mjs && web-ext build --source-dir=dist --overwrite-dest",
     "lint": "eslint src/**/*.ts*",
     "test:ci": "pnpx jest --ci --testResultsProcessor='jest-junit'"
   },
@@ -25,36 +25,26 @@
     "react-dom": "^18.3.1",
     "webextension-polyfill": "^0.12.0",
     "yup": "^1.4.0",
-    "zustand": "5.0.1"
+    "zustand": "^5.0"
   },
   "devDependencies": {
-    "@babel/preset-typescript": "^7.26.0",
+    "@craftamap/esbuild-plugin-html": "^0.8.0",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.9.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/webextension-polyfill": "^0.12.1",
-    "@types/webpack": "^5.28.1",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "copy-webpack-plugin": "^12.0.2",
-    "css-loader": "^7.1.2",
-    "eslint": "^8.57.1",
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-copy": "^2.1.1",
+    "eslint": "^9.15.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-react": "^7.37.2",
-    "html-webpack-plugin": "^5.6.3",
     "jest": "^29.7.0",
     "jest-junit": "^16.0.0",
-    "react-scripts": "^5.0.1",
-    "style-loader": "^4.0.0",
-    "tailwindcss": "^3.4.15",
     "ts-jest": "^29.2.5",
-    "ts-loader": "^9.4.2",
-    "ts-node": "^10.9.1",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^5.6.3",
-    "web-ext": "^8.3.0",
-    "webpack": "^5.96.1",
-    "webpack-cli": "^5.0.2"
+    "react-scripts": "^5.0.1",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^4.9.5",
+    "web-ext": "^8.3.0"
   }
 }
