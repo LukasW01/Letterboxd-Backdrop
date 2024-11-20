@@ -24,7 +24,7 @@ importers:
         specifier: ^1.4.0
         version: 1.4.0
       zustand:
-        specifier: ^5.0
+        specifier: ^5.0.1
         version: 5.0.1(@types/react@18.3.12)(immer@9.0.21)(react@18.3.1)
     devDependencies:
       '@craftamap/esbuild-plugin-html':
@@ -72,9 +72,6 @@ importers:
       eslint-plugin-react:
         specifier: ^7.37.2
         version: 7.37.2(eslint@9.15.0(jiti@1.21.6))
-      globals:
-        specifier: ^15.12.0
-        version: 15.12.0
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@22.9.1)(babel-plugin-macros@3.1.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@22.9.1)(typescript@4.9.5))
@@ -3604,10 +3601,6 @@ packages:
 
   globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
-    engines: {node: '>=18'}
-
-  globals@15.12.0:
-    resolution: {integrity: sha512-1+gLErljJFhbOVyaetcwJiJ4+eLe45S2E7P5UiZ9xGfeq3ATQf5DOv9G7MH3gGbKQLkzmNh2DxfZwLdw+j6oTQ==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -10997,7 +10990,7 @@ snapshots:
     dependencies:
       acorn: 8.14.0
       acorn-jsx: 5.3.2(acorn@8.14.0)
-      eslint-visitor-keys: 4.2.0
+      eslint-visitor-keys: 4.0.0
 
   espree@10.3.0:
     dependencies:
@@ -11467,8 +11460,6 @@ snapshots:
       type-fest: 0.20.2
 
   globals@14.0.0: {}
-
-  globals@15.12.0: {}
 
   globalthis@1.0.4:
     dependencies:
