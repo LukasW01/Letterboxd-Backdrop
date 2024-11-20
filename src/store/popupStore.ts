@@ -61,8 +61,9 @@ const usePopupStore = create<PopupStore>((set, get) => ({
         }
 
         polyfill.tabs.query({ active: true, currentWindow: true }).then((tabs: Tabs.Tab[]): void => {
-            tabs[0] && tabs[0].url && /^https?:\/\/letterboxd\.com\//.test(tabs[0].url)
-                ? polyfill.tabs.reload(tabs[0].id) : null;
+            if (tabs[0].url && /^https?:\/\/letterboxd\.com\//.test(tabs[0].url)) {
+                polyfill.tabs.reload(tabs[0].id);
+            }
         });
     },
 
@@ -78,8 +79,9 @@ const usePopupStore = create<PopupStore>((set, get) => ({
             }
 
             polyfill.tabs.query({ active: true, currentWindow: true }).then((tabs: Tabs.Tab[]): void => {
-                tabs[0] && tabs[0].url && /^https?:\/\/letterboxd\.com\//.test(tabs[0].url) 
-                    ? polyfill.tabs.reload(tabs[0].id) : null;
+                if (tabs[0].url && /^https?:\/\/letterboxd\.com\//.test(tabs[0].url)) {
+                    polyfill.tabs.reload(tabs[0].id);
+                }
             });
         }
     }
