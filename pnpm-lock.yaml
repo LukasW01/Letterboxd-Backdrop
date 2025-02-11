@@ -55,8 +55,8 @@ importers:
         specifier: ^0.12.1
         version: 0.12.1
       '@typescript-eslint/eslint-plugin':
-        specifier: ^8.20.0
-        version: 8.21.0(@typescript-eslint/parser@8.21.0(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5))(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5)
+        specifier: ^8.24.0
+        version: 8.24.0(@typescript-eslint/parser@8.21.0(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5))(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5)
       '@typescript-eslint/parser':
         specifier: ^8.20.0
         version: 8.21.0(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5)
@@ -6427,8 +6427,8 @@ packages:
   tryer@1.0.1:
     resolution: {integrity: sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==}
 
-  ts-api-utils@2.0.0:
-    resolution: {integrity: sha512-xCt/TOAc+EOHS1XPnijD3/yzpH6qg2xppZO1YDqGoVsNXfQfzHpOdNuXwrwOU8u4ITXJyDCTyt8w5g1sZv9ynQ==}
+  ts-api-utils@2.0.1:
+    resolution: {integrity: sha512-dnlgjFSVetynI8nzgJ+qF62efpglpWRk8isUEWZGWlJYySCTD6aKvbUDu+zbPeDakk3bg5H4XpitHukgfL1m9w==}
     engines: {node: '>=18.12'}
     peerDependencies:
       typescript: '>=4.8.4'
@@ -8988,7 +8988,24 @@ snapshots:
       graphemer: 1.4.0
       ignore: 5.3.2
       natural-compare: 1.4.0
-      ts-api-utils: 2.0.0(typescript@4.9.5)
+      ts-api-utils: 2.0.1(typescript@4.9.5)
+      typescript: 4.9.5
+    transitivePeerDependencies:
+      - supports-color
+
+  '@typescript-eslint/eslint-plugin@8.24.0(@typescript-eslint/parser@8.21.0(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5))(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5)':
+    dependencies:
+      '@eslint-community/regexpp': 4.12.1
+      '@typescript-eslint/parser': 8.21.0(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5)
+      '@typescript-eslint/scope-manager': 8.24.0
+      '@typescript-eslint/type-utils': 8.24.0(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5)
+      '@typescript-eslint/utils': 8.24.0(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5)
+      '@typescript-eslint/visitor-keys': 8.24.0
+      eslint: 9.19.0(jiti@1.21.7)
+      graphemer: 1.4.0
+      ignore: 5.3.2
+      natural-compare: 1.4.0
+      ts-api-utils: 2.0.1(typescript@4.9.5)
       typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
@@ -9087,7 +9104,18 @@ snapshots:
       '@typescript-eslint/utils': 8.21.0(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5)
       debug: 4.4.0
       eslint: 9.19.0(jiti@1.21.7)
-      ts-api-utils: 2.0.0(typescript@4.9.5)
+      ts-api-utils: 2.0.1(typescript@4.9.5)
+      typescript: 4.9.5
+    transitivePeerDependencies:
+      - supports-color
+
+  '@typescript-eslint/type-utils@8.24.0(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5)':
+    dependencies:
+      '@typescript-eslint/typescript-estree': 8.24.0(typescript@4.9.5)
+      '@typescript-eslint/utils': 8.24.0(eslint@9.19.0(jiti@1.21.7))(typescript@4.9.5)
+      debug: 4.4.0
+      eslint: 9.19.0(jiti@1.21.7)
+      ts-api-utils: 2.0.1(typescript@4.9.5)
       typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
@@ -9116,7 +9144,7 @@ snapshots:
       debug: 4.4.0
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.6.3
+      semver: 7.7.1
       tsutils: 3.21.0(typescript@4.9.5)
     optionalDependencies:
       typescript: 4.9.5
@@ -9132,7 +9160,21 @@ snapshots:
       is-glob: 4.0.3
       minimatch: 9.0.5
       semver: 7.6.3
-      ts-api-utils: 2.0.0(typescript@4.9.5)
+      ts-api-utils: 2.0.1(typescript@4.9.5)
+      typescript: 4.9.5
+    transitivePeerDependencies:
+      - supports-color
+
+  '@typescript-eslint/typescript-estree@8.24.0(typescript@4.9.5)':
+    dependencies:
+      '@typescript-eslint/types': 8.24.0
+      '@typescript-eslint/visitor-keys': 8.24.0
+      debug: 4.4.0
+      fast-glob: 3.3.3
+      is-glob: 4.0.3
+      minimatch: 9.0.5
+      semver: 7.7.1
+      ts-api-utils: 2.0.1(typescript@4.9.5)
       typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
@@ -9161,7 +9203,7 @@ snapshots:
       '@typescript-eslint/typescript-estree': 5.62.0(typescript@4.9.5)
       eslint: 9.19.0(jiti@1.21.7)
       eslint-scope: 5.1.1
-      semver: 7.6.3
+      semver: 7.7.1
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -11017,7 +11059,7 @@ snapshots:
     dependencies:
       acorn: 8.14.0
       acorn-jsx: 5.3.2(acorn@8.14.0)
-      eslint-visitor-keys: 4.0.0
+      eslint-visitor-keys: 4.2.0
 
   espree@10.3.0:
     dependencies:
@@ -12505,7 +12547,7 @@ snapshots:
       jest-util: 27.5.1
       natural-compare: 1.4.0
       pretty-format: 27.5.1
-      semver: 7.6.3
+      semver: 7.7.1
     transitivePeerDependencies:
       - supports-color
 
@@ -13260,7 +13302,7 @@ snapshots:
       ky: 1.7.4
       registry-auth-token: 5.0.3
       registry-url: 6.0.1
-      semver: 7.6.3
+      semver: 7.7.1
 
   pako@1.0.11: {}
 
@@ -14900,7 +14942,7 @@ snapshots:
 
   tryer@1.0.1: {}
 
-  ts-api-utils@2.0.0(typescript@4.9.5):
+  ts-api-utils@2.0.1(typescript@4.9.5):
     dependencies:
       typescript: 4.9.5
 
