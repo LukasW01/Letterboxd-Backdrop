@@ -49,8 +49,8 @@ importers:
         specifier: ^19.0.6
         version: 19.0.8
       '@types/react-dom':
-        specifier: ^19.0.2
-        version: 19.0.3(@types/react@19.0.8)
+        specifier: ^19.0.4
+        version: 19.0.4(@types/react@19.0.8)
       '@types/webextension-polyfill':
         specifier: ^0.12.1
         version: 0.12.1
@@ -1622,8 +1622,8 @@ packages:
   '@types/range-parser@1.2.7':
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
 
-  '@types/react-dom@19.0.3':
-    resolution: {integrity: sha512-0Knk+HJiMP/qOZgMyNFamlIjw9OFCsyC2ZbigmEEyXXixgre6IQpm/4V+r3qH4GC1JPvRJKInw+on2rV6YZLeA==}
+  '@types/react-dom@19.0.4':
+    resolution: {integrity: sha512-4fSQ8vWFkg+TGhePfUzVmat3eC14TXYSsiiDSLI0dVLsrm9gZFABjPy/Qu6TKgl1tq1Bu1yDsuQgY3A3DOjCcg==}
     peerDependencies:
       '@types/react': ^19.0.0
 
@@ -8820,7 +8820,7 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
-  '@types/react-dom@19.0.3(@types/react@19.0.8)':
+  '@types/react-dom@19.0.4(@types/react@19.0.8)':
     dependencies:
       '@types/react': 19.0.8
 
