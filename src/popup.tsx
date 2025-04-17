@@ -17,18 +17,18 @@ const App: React.FC = () => {
 
     return (
         <div>
-            <Main paragraph={'Letterboxd Backdrop: A Browser extension that adds a custom backdrop image to your Letterboxd profile.'}/>
+            <Main/>
             <div className="mx-4 mb-2 border-gray-400 relative flex flex-col">
                 <label htmlFor="value" className="block my-1.5 text-sm font-medium text-white">
                     URL
                 </label>
                 <div className="flex">
-                    <Input value={image} setValue={setImage} event={setValue}/>
-                    <Button event={removeValue} text={"Delete image"}/>
+                    <Input value={image} setValue={setImage} event={setValue} placeholder="https://ltrbxd.com/image.jpg"/>
+                    <Button event={removeValue} text="Delete Image"/>
                 </div>
             </div>
             <Alert bool={error.bool} text={error.text}/>
-            <Footer author={'Lukas W'}/>
+            <Footer/>
         </div>
     );
 };

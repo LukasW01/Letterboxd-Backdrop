@@ -10,13 +10,13 @@ const backdrop = (url: string): void => {
         document.body.classList.add('backdropped', 'backdrop-loaded');
         document.getElementById('content')?.classList.add('-backdrop');
 
-        const backdropContainer: HTMLElement | null = document.querySelector('.backdrop-container') || (() => {
-            return document.body.appendChild(Object.assign(document.createElement('div'), { classList: ['backdrop-container'] }));
-        })();
+        const backdropContainer: HTMLElement = 
+            document.querySelector('.backdrop-container') || (() => { return document.body.appendChild(Object.assign(document.createElement('div'), { classList: ['backdrop-container'] }))})();
 
         backdropContainer.innerHTML = `
-          <div id="backdrop" class="backdrop-wrapper -loaded" data-backdrop="${url}" data-backdropmobile="${url}" data-offset="0">
-            <div class="backdropplaceholder js-backdrop-placeholder" style="background-image: url(${url}); background-position: center -0px;"></div> <div class="backdropimage js-backdrop-image" style="background-position: center 0px; background-image: url(${url});"></div> <div class="backdropmask js-backdrop-fade"></div>
+          <div id="backdrop" class="backdrop-wrapper -loaded" data-backdrop="${url}" data-backdropmobile="${url}" data-backdrop2x="${url}" data-offset="0">
+            <div class="backdropimage js-backdrop-image" style="background-image: url(${url}); background-position: center -70px;"></div> <div class="backdropimage js-backdrop-image" style="background-position: center 0px; background-image: url(${url});"></div> 
+            <div class="backdropmask js-backdrop-fade"></div>
           </div>
         `;
     }
@@ -31,9 +31,9 @@ const backdrop = (url: string): void => {
     }
 
     if (result) {
-        const [errorResponse, response] = await tryCatch(axios.get(result.image).catch((error: Error) => error)) as [Error, AxiosResponse<Response>];
-        if (errorResponse) {
-            console.error(errorResponse);
+        const [error, response] = await tryCatch(axios.get(result.image)) as [Error, AxiosResponse<Response>];
+        if (error) {
+            console.error(error);
             return;
         }
 

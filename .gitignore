@@ -1,13 +1,5 @@
 # Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
 .DS_Store
-.buildlog/
-.history
-.svn/
-migrate_working_dir/
 
 # IDE
 .idea/
@@ -17,11 +9,12 @@ migrate_working_dir/
 # Build
 /dist/
 /web-ext-artifacts/
+
 # TailwindCSS
 tailwind.css
 
 # npm
 node_modules/*
 
-# J-Unit
+# JUnit
 junit.xml

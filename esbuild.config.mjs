@@ -15,18 +15,9 @@ esbuild.build({
   metafile: true,
   target: ['es2020'],
   plugins: [
-    copy({
-      assets: {
-        from: ['./src/manifest.json', './src/css', './src/img'],
-        to: ['./', './css', './img'],
-      },
-    }),
-    htmlPlugin({
-      files: [{
-        entryPoints: ['popup'],
-        filename: 'popup.html',
-        htmlTemplate: './src/popup.html',
-      }],
-    }),
+    copy({ assets: { from: ['./src/manifest.json'], to: ['./'] } }),
+    copy({ assets: { from: ['./src/css/*'], to: ['./css'] } }),
+    copy({ assets: { from: ['./src/img/*'], to: ['./img'] } }),
+    htmlPlugin({ files: [{ entryPoints: ['popup'], filename: 'popup.html', htmlTemplate: './src/popup.html' }] }),
   ],
 }).catch(() => process.exit(1));

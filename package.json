@@ -3,8 +3,8 @@
   "version": "1.4",
   "scripts": {
     "build:esbuild": "node esbuild.config.mjs",
-    "build:tailwind": "tailwindcss build -i src/css/tail-wind.css -o src/css/tailwind.css",
-    "build:all": "tailwindcss build -i src/css/tail-wind.css -o src/css/tailwind.css && node esbuild.config.mjs && web-ext build --source-dir=dist --overwrite-dest",
+    "build:tailwind": "tailwindcss build -i src/css/styles.css -o src/css/tailwind.css",
+    "build:all": "tailwindcss build -i src/css/styles.css -o src/css/tailwind.css && node esbuild.config.mjs && web-ext build --source-dir=dist --overwrite-dest",
     "lint": "eslint src/**/*.ts*",
     "test:ci": "pnpx jest --ci --testResultsProcessor='jest-junit'"
   },
@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "axios": "^1.8.4",
-    "globals": "^16.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "webextension-polyfill": "^0.12.0",

@@ -3,14 +3,6 @@ import polyfill, { Tabs } from "webextension-polyfill";
 import { create } from 'zustand';
 import * as yup from 'yup';
 
-const schema = yup.object().shape({
-    image: yup.string()
-        .required()
-        .url()
-        .matches(/^https?:\/\/[^\s/$.?#]+\.ltrbxd\.com(\?[^#\s]*)?.*\.(jpeg|jpg|gif|png|webp)$/),
-});
-
-
 interface Error {
     text: string;
     bool: boolean;
@@ -25,6 +17,13 @@ interface PopupStore {
     setValue: () => Promise<void>;
     removeValue: () => Promise<void>;
 }
+
+const schema = yup.object().shape({
+    image: yup.string()
+        .required()
+        .url()
+        .matches(/^https?:\/\/[^\s/$.?#]+\.ltrbxd\.com(\?[^#\s]*)?.*\.(jpeg|jpg|gif|png|webp)$/),
+});
 
 const usePopupStore = create<PopupStore>((set, get) => ({
     image: '',
@@ -52,12 +51,12 @@ const usePopupStore = create<PopupStore>((set, get) => ({
         }
         
         const [error] = await tryCatch(polyfill.storage.local.set({ image: get().image }));
-        if (error) {
+        if (!error) {
+            set({ error: { text: 'Image saved.', bool: false } });
+            set({ image: get().image });            
+        } else {
             console.error(error);
             return;
-        } else {
-            set({ error: { text: 'Image saved.', bool: false } });
-            set({ image: get().image });
         }
 
         polyfill.tabs.query({ active: true, currentWindow: true }).then((tabs: Tabs.Tab[]): void => {
@@ -70,12 +69,12 @@ const usePopupStore = create<PopupStore>((set, get) => ({
     removeValue: async (): Promise<void> => {
         if (get().image) {
             const [error] = await tryCatch(polyfill.storage.local.remove('image'));
-            if (error) {
-                console.error(error);
-                return;
-            } else {
+            if (!error) {
                 set({ error: { text: 'Image removed.', bool: false } });
                 set({ image: '' });
+            } else {
+                console.error(error);
+                return;
             }
 
             polyfill.tabs.query({ active: true, currentWindow: true }).then((tabs: Tabs.Tab[]): void => {
