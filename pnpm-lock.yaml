@@ -34,8 +34,8 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0(esbuild@0.25.2)
       '@eslint/create-config':
-        specifier: 1.6.0
-        version: 1.6.0
+        specifier: 1.8.1
+        version: 1.8.1
       '@eslint/js':
         specifier: ^9.25.0
         version: 9.25.0
@@ -1154,8 +1154,8 @@ packages:
     resolution: {integrity: sha512-yfkgDw1KR66rkT5A8ci4irzDysN7FRpq3ttJolR88OqQikAWqwA8j5VZyas+vjyBNFIJ7MfybJ9plMILI2UrCw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/create-config@1.6.0':
-    resolution: {integrity: sha512-WMHPAq4rfkJeFjER/v4a/dY6frBKREpRe+HST96JIwv7l4wHzOEUdl0GIivDgk6rBqgxvXR9cO3YhA+MiEYZzg==}
+  '@eslint/create-config@1.8.1':
+    resolution: {integrity: sha512-UUzYPqTs3rmc7xaA7L3/9cY54fobqOzN0OyAt4Dx+t+hSUm+x8pBpUhvK6YX3Px/YmO2o8vsW0GQ+SIZnBn4Rg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     hasBin: true
 
@@ -8209,10 +8209,11 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/create-config@1.6.0':
+  '@eslint/create-config@1.8.1':
     dependencies:
       cross-spawn: 7.0.6
       enquirer: 2.4.1
+      semver: 7.7.1
 
   '@eslint/eslintrc@2.1.4':
     dependencies:
