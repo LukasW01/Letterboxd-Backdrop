@@ -27,8 +27,8 @@ importers:
         specifier: ^1.6.1
         version: 1.6.1
       zustand:
-        specifier: ^5.0.3
-        version: 5.0.3(@types/react@19.1.2)(immer@9.0.21)(react@19.1.0)
+        specifier: ^5.0.4
+        version: 5.0.4(@types/react@19.1.2)(immer@9.0.21)(react@19.1.0)
     devDependencies:
       '@craftamap/esbuild-plugin-html':
         specifier: ^0.9.0
@@ -7019,8 +7019,8 @@ packages:
   zip-dir@2.0.0:
     resolution: {integrity: sha512-uhlsJZWz26FLYXOD6WVuq+fIcZ3aBPGo/cFdiLlv3KNwpa52IF3ISV8fLhQLiqVu5No3VhlqlgthN6gehil1Dg==}
 
-  zustand@5.0.3:
-    resolution: {integrity: sha512-14fwWQtU3pH4dE0dOpdMiWjddcH+QzKIgk1cl8epwSE7yag43k/AD/m4L6+K7DytAOr9gGBe3/EXj9g7cdostg==}
+  zustand@5.0.4:
+    resolution: {integrity: sha512-39VFTN5InDtMd28ZhjLyuTnlytDr9HfwO512Ai4I8ZABCoyAj4F1+sr7sD1jP/+p7k77Iko0Pb5NhgBFDCX0kQ==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
       '@types/react': '>=18.0.0'
@@ -15651,7 +15651,7 @@ snapshots:
       async: 3.2.6
       jszip: 3.10.1
 
-  zustand@5.0.3(@types/react@19.1.2)(immer@9.0.21)(react@19.1.0):
+  zustand@5.0.4(@types/react@19.1.2)(immer@9.0.21)(react@19.1.0):
     optionalDependencies:
       '@types/react': 19.1.2
       immer: 9.0.21
