@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "axios": "^1.9.0",
-    "globals": "^16.0.0",
+    "globals": "^16.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "webextension-polyfill": "^0.12.0",
