@@ -21,10 +21,6 @@ build:
   script:
     - pnpm i
     - pnpm build:all
-  artifacts:
-    when: always
-    paths:
-      - web-ext-artifacts/*.zip
 
 lint:
   stage: npm
