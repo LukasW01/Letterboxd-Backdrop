@@ -33,7 +33,3 @@ jest:
   script:
     - pnpm i
     - pnpm test:ci
-  artifacts:
-    when: always
-    reports:
-      junit: junit.xml
