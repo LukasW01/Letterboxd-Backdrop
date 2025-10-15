@@ -39,7 +39,7 @@
     "@types/webextension-polyfill": "^0.12.3",
     "@typescript-eslint/eslint-plugin": "^8.44.1",
     "@typescript-eslint/parser": "^8.46.1",
-    "esbuild": "^0.25.9",
+    "esbuild": "^0.25.11",
     "esbuild-plugin-copy": "^2.1.1",
     "eslint": "^9.33.0",
     "eslint-plugin-import": "^2.32.0",
