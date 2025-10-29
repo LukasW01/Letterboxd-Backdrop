@@ -34,8 +34,8 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0(esbuild@0.25.11)
       '@eslint/create-config':
-        specifier: 1.10.0
-        version: 1.10.0
+        specifier: 1.11.0
+        version: 1.11.0
       '@eslint/js':
         specifier: ^9.36.0
         version: 9.36.0
@@ -1246,8 +1246,8 @@ packages:
     resolution: {integrity: sha512-nmC8/totwobIiFcGkDza3GIKfAw1+hLiYVrh3I1nIomQ8PEr5cxg34jnkmGawul/ep52wGRAcyeDCNtWKSOj4Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/create-config@1.10.0':
-    resolution: {integrity: sha512-WxdTCF7uPcbxsloz1dhN0aqPRKApEZdDdc7SbMOx4NeGdCIwXA/H3uuv/IWAO0zsIwerXUZMP/3xSH70wikKBw==}
+  '@eslint/create-config@1.11.0':
+    resolution: {integrity: sha512-pjdqEl45RknS7isLCiioe5lMhcfb9MfdMoxnA0KcnFwYYByQ5AX6HyXsmmfFY/RVroFAuWiCpzsEBiefGL5cgg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     hasBin: true
 
@@ -2340,10 +2340,6 @@ packages:
 
   ansi-regex@6.1.0:
     resolution: {integrity: sha512-7HSX4QQb4CspciLpVFwyRe79O3xsIZDDLER21kERQ71oaPodF8jL725AgJMFAYbooIqolJoRLuM81SpeUkpkvA==}
-    engines: {node: '>=12'}
-
-  ansi-regex@6.2.2:
-    resolution: {integrity: sha512-Bq3SmSpyFHaWjPk8If9yc6svM8c56dB5BAtW4Qbw5jHTwwXXcTLoRMkpDJp6VL0XzlWaCHTXrkFURMYmD0sLqg==}
     engines: {node: '>=12'}
 
   ansi-styles@3.2.1:
@@ -8762,11 +8758,12 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/create-config@1.10.0':
+  '@eslint/create-config@1.11.0':
     dependencies:
+      ansi-colors: 4.1.3
       cross-spawn: 7.0.6
       enquirer: 2.4.1
-      semver: 7.7.2
+      semver: 7.7.3
 
   '@eslint/eslintrc@2.1.4':
     dependencies:
@@ -10222,8 +10219,6 @@ snapshots:
 
   ansi-regex@6.1.0: {}
 
-  ansi-regex@6.2.2: {}
-
   ansi-styles@3.2.1:
     dependencies:
       color-convert: 1.9.3
@@ -11014,7 +11009,7 @@ snapshots:
       postcss-modules-scope: 3.2.1(postcss@8.5.1)
       postcss-modules-values: 4.0.0(postcss@8.5.1)
       postcss-value-parser: 4.2.0
-      semver: 7.6.3
+      semver: 7.7.3
     optionalDependencies:
       webpack: 5.97.1(esbuild@0.25.11)
 
@@ -14481,7 +14476,7 @@ snapshots:
       cosmiconfig: 7.1.0
       klona: 2.0.6
       postcss: 8.5.1
-      semver: 7.6.3
+      semver: 7.7.3
       webpack: 5.97.1(esbuild@0.25.11)
 
   postcss-logical@5.0.4(postcss@8.5.1):
@@ -15500,7 +15495,7 @@ snapshots:
   string-length@5.0.1:
     dependencies:
       char-regex: 2.0.2
-      strip-ansi: 7.1.0
+      strip-ansi: 7.1.2
 
   string-natural-compare@3.0.1: {}
 
@@ -15596,7 +15591,7 @@ snapshots:
 
   strip-ansi@7.1.2:
     dependencies:
-      ansi-regex: 6.2.2
+      ansi-regex: 6.1.0
 
   strip-bom-buf@2.0.0:
     dependencies:
