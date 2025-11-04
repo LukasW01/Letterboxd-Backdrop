@@ -38,7 +38,7 @@
     "@types/react-dom": "^19.2.2",
     "@types/webextension-polyfill": "^0.12.3",
     "@typescript-eslint/eslint-plugin": "^8.46.1",
-    "@typescript-eslint/parser": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.3",
     "esbuild": "^0.25.12",
     "esbuild-plugin-copy": "^2.1.1",
     "eslint": "^9.39.0",
