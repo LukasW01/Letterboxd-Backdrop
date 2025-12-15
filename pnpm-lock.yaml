@@ -15,11 +15,11 @@ importers:
         specifier: ^16.5.0
         version: 16.5.0
       react:
-        specifier: ^19.2.1
-        version: 19.2.1
+        specifier: ^19.2.3
+        version: 19.2.3
       react-dom:
         specifier: ^19.2.1
-        version: 19.2.1(react@19.2.1)
+        version: 19.2.1(react@19.2.3)
       webextension-polyfill:
         specifier: ^0.12.0
         version: 0.12.0
@@ -28,7 +28,7 @@ importers:
         version: 1.7.1
       zustand:
         specifier: ^5.0.9
-        version: 5.0.9(@types/react@19.2.7)(immer@9.0.21)(react@19.2.1)
+        version: 5.0.9(@types/react@19.2.7)(immer@9.0.21)(react@19.2.3)
     devDependencies:
       '@craftamap/esbuild-plugin-html':
         specifier: ^0.9.0
@@ -83,7 +83,7 @@ importers:
         version: 16.0.0
       react-scripts:
         specifier: ^5.0.1
-        version: 5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.4))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.4))(@types/babel__core@7.20.5)(esbuild@0.27.1)(eslint@9.39.1(jiti@1.21.7))(node-notifier@10.0.1)(react@19.2.1)(type-fest@4.41.0)(typescript@4.9.5)
+        version: 5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.4))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.4))(@types/babel__core@7.20.5)(esbuild@0.27.1)(eslint@9.39.1(jiti@1.21.7))(node-notifier@10.0.1)(react@19.2.3)(type-fest@4.41.0)(typescript@4.9.5)
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17
@@ -5984,8 +5984,8 @@ packages:
       typescript:
         optional: true
 
-  react@19.2.1:
-    resolution: {integrity: sha512-DGrYcCWK7tvYMnWh79yrPHt+vdx9tY+1gPZa7nJQtO/p8bLTDaHp4dzwEhQB7pZ4Xe3ok4XKuEPrVuc+wlpkmw==}
+  react@19.2.3:
+    resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
     engines: {node: '>=0.10.0'}
 
   read-cache@1.0.0:
@@ -14800,9 +14800,9 @@ snapshots:
       - supports-color
       - vue-template-compiler
 
-  react-dom@19.2.1(react@19.2.1):
+  react-dom@19.2.1(react@19.2.3):
     dependencies:
-      react: 19.2.1
+      react: 19.2.3
       scheduler: 0.27.0
 
   react-error-overlay@6.0.11: {}
@@ -14815,7 +14815,7 @@ snapshots:
 
   react-refresh@0.11.0: {}
 
-  react-scripts@5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.4))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.4))(@types/babel__core@7.20.5)(esbuild@0.27.1)(eslint@9.39.1(jiti@1.21.7))(node-notifier@10.0.1)(react@19.2.1)(type-fest@4.41.0)(typescript@4.9.5):
+  react-scripts@5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.4))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.4))(@types/babel__core@7.20.5)(esbuild@0.27.1)(eslint@9.39.1(jiti@1.21.7))(node-notifier@10.0.1)(react@19.2.3)(type-fest@4.41.0)(typescript@4.9.5):
     dependencies:
       '@babel/core': 7.26.7
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.11.0)(type-fest@4.41.0)(webpack-dev-server@4.15.2(webpack@5.97.1(esbuild@0.27.1)))(webpack@5.97.1(esbuild@0.27.1))
@@ -14849,7 +14849,7 @@ snapshots:
       postcss-normalize: 10.0.1(browserslist@4.24.4)(postcss@8.5.1)
       postcss-preset-env: 7.8.3(postcss@8.5.1)
       prompts: 2.4.2
-      react: 19.2.1
+      react: 19.2.3
       react-app-polyfill: 3.0.0
       react-dev-utils: 12.0.1(eslint@9.39.1(jiti@1.21.7))(typescript@4.9.5)(webpack@5.97.1(esbuild@0.27.1))
       react-refresh: 0.11.0
@@ -14902,7 +14902,7 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  react@19.2.1: {}
+  react@19.2.3: {}
 
   read-cache@1.0.0:
     dependencies:
@@ -16488,8 +16488,8 @@ snapshots:
       async: 3.2.6
       jszip: 3.10.1
 
-  zustand@5.0.9(@types/react@19.2.7)(immer@9.0.21)(react@19.2.1):
+  zustand@5.0.9(@types/react@19.2.7)(immer@9.0.21)(react@19.2.3):
     optionalDependencies:
       '@types/react': 19.2.7
       immer: 9.0.21
-      react: 19.2.1
+      react: 19.2.3
