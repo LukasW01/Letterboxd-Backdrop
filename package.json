@@ -26,7 +26,7 @@
     "react-dom": "^19.2.3",
     "webextension-polyfill": "^0.12.0",
     "yup": "^1.7.1",
-    "zustand": "^5.0.9"
+    "zustand": "^5.0.10"
   },
   "devDependencies": {
     "@craftamap/esbuild-plugin-html": "^0.9.0",
