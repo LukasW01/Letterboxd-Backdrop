@@ -1,3 +1,8 @@
-export const checkInput = (image: string): boolean => {
-    return (/^https?:\/\/[^\s/$.?#]+\.ltrbxd\.com(\?[^#\s]*)?/.test(image) && /.(jpeg|jpg|gif|png|webp)$/.test(image) && image !== "");
-};
+import * as yup from 'yup';
+
+export const img = yup.object().shape({
+    image: yup.string()
+        .required()
+        .url()
+        .matches(/^https?:\/\/[^\s/$.?#]+\.ltrbxd\.com(\?[^#\s]*)?.*\.(jpeg|jpg|gif|png|webp)$/),
+});

@@ -31,7 +31,7 @@ jest:
   stage: npm
   script:
     - pnpm i
-    - pnpm test:ci
+    - pnpm test
   artifacts:
     when: always
     reports:

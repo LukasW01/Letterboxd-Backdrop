@@ -3,7 +3,7 @@
   "description": "Browser extension that adds a custom backdrop image to your Letterboxd profile.. ",
   "author": "Lukas Wigger",
   "manifest_version": 3,
-  "version":  "1.5",
+  "version":  "1.6",
   "action": {
     "default_title": "Letterboxd-Backdrop",
     "default_popup": "popup.html"

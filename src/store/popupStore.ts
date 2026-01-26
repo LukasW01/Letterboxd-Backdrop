@@ -1,7 +1,7 @@
 import { tryCatch } from '../util/throw';
+import { img } from '../util/validation';
 import polyfill, { Tabs } from "webextension-polyfill";
 import { create } from 'zustand';
-import * as yup from 'yup';
 
 interface Error {
     text: string;
@@ -17,13 +17,6 @@ interface PopupStore {
     setValue: () => Promise<void>;
     removeValue: () => Promise<void>;
 }
-
-const schema = yup.object().shape({
-    image: yup.string()
-        .required()
-        .url()
-        .matches(/^https?:\/\/[^\s/$.?#]+\.ltrbxd\.com(\?[^#\s]*)?.*\.(jpeg|jpg|gif|png|webp)$/),
-});
 
 const usePopupStore = create<PopupStore>((set, get) => ({
     image: '',
@@ -45,7 +38,7 @@ const usePopupStore = create<PopupStore>((set, get) => ({
     },
 
     setValue: async (): Promise<void> => {
-        if (!schema.isValidSync(get())) {
+        if (!img.isValidSync(get())) {
             set({ error: { text: 'Invalid URL or image.', bool: true } });
             return;
         }
