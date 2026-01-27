@@ -1,6 +1,6 @@
 {
   "name": "letterboxd-backdrop",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "scripts": {
     "build:esbuild": "node esbuild.config.mjs",
     "build:tailwind": "tailwindcss build -i src/css/styles.css -o src/css/tailwind.css",
