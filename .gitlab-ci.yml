@@ -14,6 +14,7 @@ build:
   stage: npm
   before_script:
     - npm install -g pnpm
+    - pnpm config set store-dir .pnpm-store
   script:
     - pnpm i
     - pnpm build:all
@@ -22,6 +23,7 @@ lint:
   stage: npm
   before_script:
     - npm install -g pnpm
+    - pnpm config set store-dir .pnpm-store
   script:
     - pnpm i
     - pnpm lint
@@ -30,6 +32,7 @@ jest:
   stage: npm
   before_script:
     - npm install -g pnpm
+    - pnpm config set store-dir .pnpm-store
   script:
     - pnpm i
     - pnpm test
