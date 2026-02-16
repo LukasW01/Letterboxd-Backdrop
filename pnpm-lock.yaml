@@ -25,7 +25,7 @@ importers:
         version: 1.7.1
       zustand:
         specifier: ^5.0.11
-        version: 5.0.11(@types/react@19.2.13)(immer@9.0.21)(react@19.2.4)
+        version: 5.0.11(@types/react@19.2.14)(immer@9.0.21)(react@19.2.4)
     devDependencies:
       '@craftamap/esbuild-plugin-html':
         specifier: ^0.9.0
@@ -43,11 +43,11 @@ importers:
         specifier: ^25.0.10
         version: 25.2.3
       '@types/react':
-        specifier: ^19.2.13
-        version: 19.2.13
+        specifier: ^19.2.14
+        version: 19.2.14
       '@types/react-dom':
         specifier: ^19.2.3
-        version: 19.2.3(@types/react@19.2.13)
+        version: 19.2.3(@types/react@19.2.14)
       '@types/webextension-polyfill':
         specifier: ^0.12.4
         version: 0.12.4
@@ -1817,8 +1817,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.13':
-    resolution: {integrity: sha512-KkiJeU6VbYbUOp5ITMIc7kBfqlYkKA5KhEHVrGMmUUMt7NeaZg65ojdPk+FtNrBAOXNVM5QM72jnADjM+XVRAQ==}
+  '@types/react@19.2.14':
+    resolution: {integrity: sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==}
 
   '@types/resolve@1.17.1':
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
@@ -9580,11 +9580,11 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
-  '@types/react-dom@19.2.3(@types/react@19.2.13)':
+  '@types/react-dom@19.2.3(@types/react@19.2.14)':
     dependencies:
-      '@types/react': 19.2.13
+      '@types/react': 19.2.14
 
-  '@types/react@19.2.13':
+  '@types/react@19.2.14':
     dependencies:
       csstype: 3.2.3
 
@@ -16521,8 +16521,8 @@ snapshots:
       async: 3.2.6
       jszip: 3.10.1
 
-  zustand@5.0.11(@types/react@19.2.13)(immer@9.0.21)(react@19.2.4):
+  zustand@5.0.11(@types/react@19.2.14)(immer@9.0.21)(react@19.2.4):
     optionalDependencies:
-      '@types/react': 19.2.13
+      '@types/react': 19.2.14
       immer: 9.0.21
       react: 19.2.4
