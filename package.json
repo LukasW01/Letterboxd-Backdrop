@@ -9,7 +9,7 @@
     "test": "pnpm exec jest --ci --testResultsProcessor=jest-junit"
   },
   "dependencies": {
-    "react": "^19.2.4",
+    "react": "^19.2.5",
     "react-dom": "^19.2.4",
     "webextension-polyfill": "^0.12.0",
     "yup": "^1.7.1",
