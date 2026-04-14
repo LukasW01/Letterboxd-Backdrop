@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       react:
-        specifier: ^19.2.4
-        version: 19.2.4
+        specifier: ^19.2.5
+        version: 19.2.5
       react-dom:
         specifier: ^19.2.4
-        version: 19.2.4(react@19.2.4)
+        version: 19.2.4(react@19.2.5)
       webextension-polyfill:
         specifier: ^0.12.0
         version: 0.12.0
@@ -22,7 +22,7 @@ importers:
         version: 1.7.1
       zustand:
         specifier: ^5.0.12
-        version: 5.0.12(@types/react@19.2.14)(immer@9.0.21)(react@19.2.4)
+        version: 5.0.12(@types/react@19.2.14)(immer@9.0.21)(react@19.2.5)
     devDependencies:
       '@craftamap/esbuild-plugin-html':
         specifier: ^0.9.0
@@ -80,7 +80,7 @@ importers:
         version: 16.0.0
       react-scripts:
         specifier: ^5.0.1
-        version: 5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.29.0))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.29.0))(@types/babel__core@7.20.5)(esbuild@0.28.0)(eslint@9.39.2(jiti@1.21.7))(node-notifier@10.0.1)(react@19.2.4)(type-fest@4.41.0)(typescript@4.9.5)
+        version: 5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.29.0))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.29.0))(@types/babel__core@7.20.5)(esbuild@0.28.0)(eslint@9.39.2(jiti@1.21.7))(node-notifier@10.0.1)(react@19.2.5)(type-fest@4.41.0)(typescript@4.9.5)
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17
@@ -2050,49 +2050,41 @@ packages:
     resolution: {integrity: sha512-34gw7PjDGB9JgePJEmhEqBhWvCiiWCuXsL9hYphDF7crW7UgI05gyBAi6MF58uGcMOiOqSJ2ybEeCvHcq0BCmQ==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-arm64-musl@1.11.1':
     resolution: {integrity: sha512-RyMIx6Uf53hhOtJDIamSbTskA99sPHS96wxVE/bJtePJJtpdKGXO1wY90oRdXuYOGOTuqjT8ACccMc4K6QmT3w==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@unrs/resolver-binding-linux-ppc64-gnu@1.11.1':
     resolution: {integrity: sha512-D8Vae74A4/a+mZH0FbOkFJL9DSK2R6TFPC9M+jCWYia/q2einCubX10pecpDiTmkJVUH+y8K3BZClycD8nCShA==}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-riscv64-gnu@1.11.1':
     resolution: {integrity: sha512-frxL4OrzOWVVsOc96+V3aqTIQl1O2TjgExV4EKgRY09AJ9leZpEg8Ak9phadbuX0BA4k8U5qtvMSQQGGmaJqcQ==}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-riscv64-musl@1.11.1':
     resolution: {integrity: sha512-mJ5vuDaIZ+l/acv01sHoXfpnyrNKOk/3aDoEdLO/Xtn9HuZlDD6jKxHlkN8ZhWyLJsRBxfv9GYM2utQ1SChKew==}
     cpu: [riscv64]
     os: [linux]
-    libc: [musl]
 
   '@unrs/resolver-binding-linux-s390x-gnu@1.11.1':
     resolution: {integrity: sha512-kELo8ebBVtb9sA7rMe1Cph4QHreByhaZ2QEADd9NzIQsYNQpt9UkM9iqr2lhGr5afh885d/cB5QeTXSbZHTYPg==}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-x64-gnu@1.11.1':
     resolution: {integrity: sha512-C3ZAHugKgovV5YvAMsxhq0gtXuwESUKc5MhEtjBpLoHPLYM+iuwSj3lflFwK3DPm68660rZ7G8BMcwSro7hD5w==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-x64-musl@1.11.1':
     resolution: {integrity: sha512-rV0YSoyhK2nZ4vEswT/QwqzqQXw5I6CjoaYMOX0TqBlWhojUf8P94mvI7nuJTeaCkkds3QE4+zS8Ko+GdXuZtA==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@unrs/resolver-binding-wasm32-wasi@1.11.1':
     resolution: {integrity: sha512-5u4RkfxJm+Ng7IWgkzi3qrFOvLvQYnPBmjmZQ8+szTK/b31fQCnleNl1GgEt7nIsZRIf5PLhPwT0WM+q45x/UQ==}
@@ -6023,8 +6015,8 @@ packages:
       typescript:
         optional: true
 
-  react@19.2.4:
-    resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
+  react@19.2.5:
+    resolution: {integrity: sha512-llUJLzz1zTUBrskt2pwZgLq59AemifIftw4aB7JxOqf1HY2FDaGDxgwpAPVzHU1kdWabH7FauP4i1oEeer2WCA==}
     engines: {node: '>=0.10.0'}
 
   read-cache@1.0.0:
@@ -14880,9 +14872,9 @@ snapshots:
       - supports-color
       - vue-template-compiler
 
-  react-dom@19.2.4(react@19.2.4):
+  react-dom@19.2.4(react@19.2.5):
     dependencies:
-      react: 19.2.4
+      react: 19.2.5
       scheduler: 0.27.0
 
   react-error-overlay@6.0.11: {}
@@ -14895,7 +14887,7 @@ snapshots:
 
   react-refresh@0.11.0: {}
 
-  react-scripts@5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.29.0))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.29.0))(@types/babel__core@7.20.5)(esbuild@0.28.0)(eslint@9.39.2(jiti@1.21.7))(node-notifier@10.0.1)(react@19.2.4)(type-fest@4.41.0)(typescript@4.9.5):
+  react-scripts@5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.29.0))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.29.0))(@types/babel__core@7.20.5)(esbuild@0.28.0)(eslint@9.39.2(jiti@1.21.7))(node-notifier@10.0.1)(react@19.2.5)(type-fest@4.41.0)(typescript@4.9.5):
     dependencies:
       '@babel/core': 7.26.7
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.11.0)(type-fest@4.41.0)(webpack-dev-server@4.15.2(webpack@5.105.1(esbuild@0.28.0)))(webpack@5.105.1(esbuild@0.28.0))
@@ -14929,7 +14921,7 @@ snapshots:
       postcss-normalize: 10.0.1(browserslist@4.24.4)(postcss@8.5.1)
       postcss-preset-env: 7.8.3(postcss@8.5.1)
       prompts: 2.4.2
-      react: 19.2.4
+      react: 19.2.5
       react-app-polyfill: 3.0.0
       react-dev-utils: 12.0.1(eslint@9.39.2(jiti@1.21.7))(typescript@4.9.5)(webpack@5.105.1(esbuild@0.28.0))
       react-refresh: 0.11.0
@@ -14982,7 +14974,7 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  react@19.2.4: {}
+  react@19.2.5: {}
 
   read-cache@1.0.0:
     dependencies:
@@ -16597,8 +16589,8 @@ snapshots:
       async: 3.2.6
       jszip: 3.10.1
 
-  zustand@5.0.12(@types/react@19.2.14)(immer@9.0.21)(react@19.2.4):
+  zustand@5.0.12(@types/react@19.2.14)(immer@9.0.21)(react@19.2.5):
     optionalDependencies:
       '@types/react': 19.2.14
       immer: 9.0.21
-      react: 19.2.4
+      react: 19.2.5
