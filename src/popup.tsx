@@ -27,7 +27,7 @@ const App: React.FC = () => {
                     <Button event={removeValue} text="Delete Image"/>
                 </div>
             </div>
-            <Alert bool={error.bool} text={error.text}/>
+            <Alert alert={error.bool} text={error.text}/>
             <Footer/>
         </div>
     );

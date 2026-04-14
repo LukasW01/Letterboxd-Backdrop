@@ -1,5 +1,4 @@
 import polyfill from "webextension-polyfill";
-import axios, {AxiosResponse} from "axios";
 import { tryCatch } from "../util/throw";
 
 const backdrop = (url: string): void => {
@@ -31,7 +30,7 @@ const backdrop = (url: string): void => {
     }
 
     if (result) {
-        const [error, response] = await tryCatch(axios.get(result.image)) as [Error, AxiosResponse<Response>];
+        const [error, response] = await tryCatch(fetch(result.image)) as [Error, Response];
         if (error) {
             console.error(error);
             return;
