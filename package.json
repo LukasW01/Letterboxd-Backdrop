@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@craftamap/esbuild-plugin-html": "^0.9.0",
-    "@eslint/create-config": "1.11.0",
+    "@eslint/create-config": "2.0.0",
     "@eslint/js": "^9.39.4",
     "@types/jest": "^30.0.0",
     "@types/node": "^25.9.3",
