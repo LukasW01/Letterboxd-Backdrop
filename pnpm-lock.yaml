@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       react:
-        specifier: ^19.2.7
-        version: 19.2.7
+        specifier: ^19.2.8
+        version: 19.2.8
       react-dom:
         specifier: ^19.2.7
-        version: 19.2.7(react@19.2.7)
+        version: 19.2.7(react@19.2.8)
       webextension-polyfill:
         specifier: ^0.12.0
         version: 0.12.0
@@ -22,7 +22,7 @@ importers:
         version: 1.7.1
       zustand:
         specifier: ^5.0.14
-        version: 5.0.14(@types/react@19.2.17)(immer@9.0.21)(react@19.2.7)
+        version: 5.0.14(@types/react@19.2.18)(immer@9.0.21)(react@19.2.8)
     devDependencies:
       '@craftamap/esbuild-plugin-html':
         specifier: ^0.9.0
@@ -40,11 +40,11 @@ importers:
         specifier: ^26.1.1
         version: 26.1.1
       '@types/react':
-        specifier: ^19.2.17
-        version: 19.2.17
+        specifier: ^19.2.18
+        version: 19.2.18
       '@types/react-dom':
         specifier: ^19.2.3
-        version: 19.2.3(@types/react@19.2.17)
+        version: 19.2.3(@types/react@19.2.18)
       '@types/webextension-polyfill':
         specifier: ^0.12.5
         version: 0.12.5
@@ -80,7 +80,7 @@ importers:
         version: 17.0.0
       react-scripts:
         specifier: ^5.0.1
-        version: 5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.29.7(supports-color@8.1.1)))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(@types/babel__core@7.20.5)(clean-css@5.3.3)(csso@4.2.0)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.1)(eslint@9.39.2(jiti@1.21.7)(supports-color@8.1.1))(node-notifier@10.0.1)(react@19.2.7)(supports-color@8.1.1)(type-fest@4.41.0)(typescript@4.9.5)(uglify-js@3.19.3)
+        version: 5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.29.7(supports-color@8.1.1)))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(@types/babel__core@7.20.5)(clean-css@5.3.3)(csso@4.2.0)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.1)(eslint@9.39.2(jiti@1.21.7)(supports-color@8.1.1))(node-notifier@10.0.1)(react@19.2.8)(supports-color@8.1.1)(type-fest@4.41.0)(typescript@4.9.5)(uglify-js@3.19.3)
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17
@@ -1958,8 +1958,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.17':
-    resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
+  '@types/react@19.2.18':
+    resolution: {integrity: sha512-AnzbBERsrLKtk2XSfTbYRLjQPdy116Sty4q+T+Bp3IC4l6jNBvreVPAHmpq9qhXQM7CXZPjLVmGMw9sy+hxQ3w==}
 
   '@types/resolve@1.17.1':
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
@@ -6291,8 +6291,8 @@ packages:
       typescript:
         optional: true
 
-  react@19.2.7:
-    resolution: {integrity: sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==}
+  react@19.2.8:
+    resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
     engines: {node: '>=0.10.0'}
 
   read-cache@1.0.0:
@@ -10020,11 +10020,11 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
-  '@types/react-dom@19.2.3(@types/react@19.2.17)':
+  '@types/react-dom@19.2.3(@types/react@19.2.18)':
     dependencies:
-      '@types/react': 19.2.17
+      '@types/react': 19.2.18
 
-  '@types/react@19.2.17':
+  '@types/react@19.2.18':
     dependencies:
       csstype: 3.2.3
 
@@ -15458,9 +15458,9 @@ snapshots:
       - supports-color
       - vue-template-compiler
 
-  react-dom@19.2.7(react@19.2.7):
+  react-dom@19.2.7(react@19.2.8):
     dependencies:
-      react: 19.2.7
+      react: 19.2.8
       scheduler: 0.27.0
 
   react-error-overlay@6.0.11: {}
@@ -15475,7 +15475,7 @@ snapshots:
 
   react-refresh@0.11.0: {}
 
-  react-scripts@5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.29.7(supports-color@8.1.1)))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(@types/babel__core@7.20.5)(clean-css@5.3.3)(csso@4.2.0)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.1)(eslint@9.39.2(jiti@1.21.7)(supports-color@8.1.1))(node-notifier@10.0.1)(react@19.2.7)(supports-color@8.1.1)(type-fest@4.41.0)(typescript@4.9.5)(uglify-js@3.19.3):
+  react-scripts@5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.29.7(supports-color@8.1.1)))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(@types/babel__core@7.20.5)(clean-css@5.3.3)(csso@4.2.0)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.1)(eslint@9.39.2(jiti@1.21.7)(supports-color@8.1.1))(node-notifier@10.0.1)(react@19.2.8)(supports-color@8.1.1)(type-fest@4.41.0)(typescript@4.9.5)(uglify-js@3.19.3):
     dependencies:
       '@babel/core': 7.26.7(supports-color@8.1.1)
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.11.0)(type-fest@4.41.0)(webpack-dev-server@4.15.2(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(webpack@5.105.1(esbuild@0.28.1)(uglify-js@3.19.3)))(webpack@5.105.1(esbuild@0.28.1)(uglify-js@3.19.3))
@@ -15509,7 +15509,7 @@ snapshots:
       postcss-normalize: 10.0.1(browserslist@4.24.4)(postcss@8.5.1)
       postcss-preset-env: 7.8.3(postcss@8.5.1)
       prompts: 2.4.2
-      react: 19.2.7
+      react: 19.2.8
       react-app-polyfill: 3.0.0
       react-dev-utils: 12.0.1(eslint@9.39.2(jiti@1.21.7)(supports-color@8.1.1))(supports-color@8.1.1)(typescript@4.9.5)(webpack@5.105.1(esbuild@0.28.1)(uglify-js@3.19.3))
       react-refresh: 0.11.0
@@ -15562,7 +15562,7 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  react@19.2.7: {}
+  react@19.2.8: {}
 
   read-cache@1.0.0:
     dependencies:
@@ -17193,8 +17193,8 @@ snapshots:
       async: 3.2.6
       jszip: 3.10.1
 
-  zustand@5.0.14(@types/react@19.2.17)(immer@9.0.21)(react@19.2.7):
+  zustand@5.0.14(@types/react@19.2.18)(immer@9.0.21)(react@19.2.8):
     optionalDependencies:
-      '@types/react': 19.2.17
+      '@types/react': 19.2.18
       immer: 9.0.21
-      react: 19.2.7
+      react: 19.2.8
